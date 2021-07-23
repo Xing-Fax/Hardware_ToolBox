@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hardware ToolBox", "Hardware ToolBox\Hardware ToolBox.csproj", "{15B490D0-A01A-49DD-899D-C653B33E01F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15B490D0-A01A-49DD-899D-C653B33E01F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B490D0-A01A-49DD-899D-C653B33E01F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B490D0-A01A-49DD-899D-C653B33E01F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B490D0-A01A-49DD-899D-C653B33E01F8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DB96D14-A71C-4888-9175-2C0130DE9524}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+﻿<Window x:Class="Hardware_ToolBox.Initial_screen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hardware_ToolBox"
+        mc:Ignorable="d"
+        Title="Initial_screen" Height="320" Width="640" AllowsTransparency="True" WindowStyle="None" ShowInTaskbar="False" Topmost="True" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="{x:Null}" Activated="Window_Activated">
+    <Grid Clip="M0,10 C0,4.4771525 4.4771525,0 10,0 L630,0 C635.52285,0 640,4.4771525 640,10 L640,310 C640,315.52285 635.52285,320 630,320 L10,320 C4.4771525,320 0,315.52285 0,310 z">
+        <Rectangle Fill="#FFF06292" HorizontalAlignment="Left" Height="320" Margin="260,0,0,0" VerticalAlignment="Top" Width="380"/>
+
+        <Image HorizontalAlignment="Left" Height="210" VerticalAlignment="Top" Width="285" Margin="310,60,0,0" Source="Resources/图片3.png">
+            <Image.Effect>
+                <DropShadowEffect Opacity="0.515" ShadowDepth="9" BlurRadius="6" Direction="322"/>
+            </Image.Effect>
+        </Image>
+        <Rectangle Fill="#FFFFCADC" HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="260"/>
+        <Label Content="Hardware ToolBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5,10,0,0" Height="54.657" Width="255" FontSize="30" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold">
+            <Label.Effect>
+                <DropShadowEffect ShadowDepth="2" BlurRadius="3" Opacity="0.61"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="图形化程序启动中..." HorizontalAlignment="Left" Height="25" Margin="10,69.657,0,0" VerticalAlignment="Top" Width="125" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
+        <TextBlock x:Name="加载" HorizontalAlignment="Left" Height="180.343" Margin="15,99.657,0,0" TextWrapping="Wrap" Text="初始化程序..." VerticalAlignment="Top" Width="220" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="#DD000000" Background="#00000000"/>
+        <Label Content="Copyright © XCZ 2021" HorizontalAlignment="Left" Height="25" Margin="10,290,0,0" VerticalAlignment="Top" Width="170" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
+        <ProgressBar
+  IsIndeterminate="True" Margin="0,316,380,0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFF06292" />
+
+    </Grid>
+</Window>

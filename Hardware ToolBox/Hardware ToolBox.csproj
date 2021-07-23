@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15B490D0-A01A-49DD-899D-C653B33E01F8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Hardware_ToolBox</RootNamespace>
+    <AssemblyName>Hardware ToolBox</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=2.0.1.2556, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.1\lib\net452\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.1.0.2556, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.1.0\lib\net452\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenHardwareMonitorLib, Version=0.9.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Detection engine\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="String_algorithm\AES.cs" />
+    <Compile Include="String_algorithm\Base64.cs" />
+    <Compile Include="String_algorithm\DES.cs" />
+    <Compile Include="String_algorithm\Key_handling.cs" />
+    <Compile Include="String_algorithm\RC4.cs" />
+    <Compile Include="String_algorithm\SHA265.cs" />
+    <Compile Include="String_algorithm\SHA512.cs" />
+    <Page Include="Initial_screen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Initial_screen.xaml.cs">
+      <DependentUpon>Initial_screen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Read_and_write_files.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Function.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.manifest" />
+    <None Include="data\Graphicscard.edb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\IntelChipset.edb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="data\Memorytype.edb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Security certificate installation\certificate.cer">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Resources\有爱魔兽圆体-R.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\背景1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon_file\100.png" />
+    <Resource Include="Icon_file\101.png" />
+    <Resource Include="Icon_file\102.png" />
+    <Resource Include="Icon_file\103.png" />
+    <Resource Include="Icon_file\104.png" />
+    <Resource Include="Icon_file\105.png" />
+    <Resource Include="Icon_file\106.png" />
+    <Resource Include="Icon_file\107.png" />
+    <Resource Include="Icon_file\108.png" />
+    <Resource Include="Icon_file\109.png" />
+    <Resource Include="Icon_file\120.png" />
+    <Resource Include="Icon_file\121.png" />
+    <Resource Include="Icon_file\122.png" />
+    <Resource Include="Icon_file\125.png" />
+    <Resource Include="Icon_file\126.png" />
+    <Resource Include="Icon_file\127.png" />
+    <Resource Include="Icon_file\128.png" />
+    <Resource Include="Icon_file\129.png" />
+    <Resource Include="Icon_file\130.png" />
+    <Resource Include="Icon_file\131.png" />
+    <Resource Include="Icon_file\132.png" />
+    <Resource Include="Icon_file\133.png" />
+    <Resource Include="Icon_file\134.png" />
+    <Resource Include="Icon_file\136.png" />
+    <Resource Include="Icon_file\137.png" />
+    <Resource Include="Icon_file\139.png" />
+    <Resource Include="Icon_file\140.png" />
+    <Resource Include="Icon_file\141.png" />
+    <Resource Include="Icon_file\142.png" />
+    <Resource Include="Icon_file\143.png" />
+    <Resource Include="Icon_file\144.png" />
+    <Resource Include="Icon_file\145.png" />
+    <Resource Include="Icon_file\146.png" />
+    <Resource Include="Icon_file\147.png" />
+    <Resource Include="Icon_file\148.png" />
+    <Resource Include="Icon_file\149.png" />
+    <Resource Include="Icon_file\150.png" />
+    <Resource Include="Icon_file\151.png" />
+    <Resource Include="Icon_file\152.png" />
+    <Resource Include="Icon_file\153.png" />
+    <Resource Include="Icon_file\154.png" />
+    <Resource Include="Icon_file\155.png" />
+    <Resource Include="Icon_file\156.png" />
+    <Resource Include="Icon_file\157.png" />
+    <Resource Include="Icon_file\158.png" />
+    <Resource Include="Icon_file\159.png" />
+    <Resource Include="Icon_file\160.png" />
+    <Resource Include="Icon_file\161.png" />
+    <Resource Include="Icon_file\162.png" />
+    <Resource Include="Icon_file\163.png" />
+    <Resource Include="Icon_file\164.png" />
+    <Resource Include="Icon_file\165.png" />
+    <Resource Include="Icon_file\166.png" />
+    <Resource Include="Icon_file\167.png" />
+    <Resource Include="Icon_file\168.png" />
+    <Resource Include="Icon_file\169.png" />
+    <Resource Include="Icon_file\170.png" />
+    <Resource Include="Icon_file\171.png" />
+    <Resource Include="Icon_file\172.png" />
+    <Resource Include="Icon_file\173.png" />
+    <Resource Include="Icon_file\175.png" />
+    <Resource Include="Icon_file\176.png" />
+    <Resource Include="Icon_file\177.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="图标1024x1024.ico" />
+    <Content Include="Hardware detection.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Icon_file\123.png" />
+    <Resource Include="Icon_file\124.png" />
+    <Resource Include="Icon_file\174.png" />
+    <Resource Include="Icon_file\180.png" />
+    <Resource Include="Icon_file\181.png" />
+    <Resource Include="Icon_file\182.png" />
+    <Resource Include="Icon_file\183.png" />
+    <Resource Include="Icon_file\184.png" />
+    <Resource Include="Icon_file\185.png" />
+    <Resource Include="Icon_file\186.png" />
+    <Resource Include="Icon_file\187.png" />
+    <Resource Include="Icon_file\188.png" />
+    <Resource Include="Icon_file\189.png" />
+    <Resource Include="Icon_file\190.png" />
+    <Resource Include="Icon_file\191.png" />
+    <Resource Include="Icon_file\192.png" />
+    <Resource Include="Icon_file\193.png" />
+    <Resource Include="Icon_file\194.png" />
+    <Resource Include="Icon_file\195.png" />
+    <Resource Include="Icon_file\196.png" />
+    <Resource Include="Icon_file\197.png" />
+    <Resource Include="Icon_file\198.png" />
+    <Resource Include="Icon_file\199.png" />
+    <Content Include="OpenHardwareMonitorLib.dll" />
+    <Content Include="Processor occupied.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\小人.png" />
+    <Resource Include="Resources\背景2.jpg" />
+    <Resource Include="Resources\方块.png" />
+    <Resource Include="Resources\图片1.png" />
+    <Resource Include="Resources\图片2.png" />
+    <Resource Include="Resources\图片3.png" />
+    <Resource Include="Resources\图标.png" />
+    <Content Include="Security certificate installation\AgileDotNet.VMRuntime.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Security certificate installation\Certificate installation.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="System memory information.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>图标1024x1024.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.1.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
