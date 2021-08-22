@@ -17,21 +17,22 @@ namespace Hardware_ToolBox
     /// </summary>
     public partial class App : Application
     {
-        //用于获取基本配置信息
-        [DllImport("Hardware detection.dll")]
-        public static extern string Hwinfo(string Configuration_file_path, string Run_directory);
+        ////用于获取基本配置信息
+        //[DllImport("Hardware detection.dll")]
+        //public static extern string Hwinfo(string Configuration_file_path, string Run_directory);
         //读ini文件
         [DllImport("kernel32")]
         public static extern int GetPrivateProfileString(string section, string key, string defVal, StringBuilder retVal, int size, string filePath);
         //写ini文件
         [DllImport("kernel32")]
         public static extern long WritePrivateProfileString(string section, string key, string val, string filePath);
-        //读取内存信息写入到给定的ini文件中
-        [DllImport("System memory information.dll")]
-        public static extern void Memory_information();
-        //得到cpu使用率
-        [DllImport("Processor occupied.dll")]
-        public static extern int Processor();
+
+        ////读取内存信息写入到给定的ini文件中
+        //[DllImport("System memory information.dll")]
+        //public static extern void Memory_information();
+        ////得到cpu使用率
+        //[DllImport("Processor occupied.dll")]
+        //public static extern int Processor();
         //得到内存使用率
         [DllImport("Processor occupied.dll")]
         public static extern int ram();

@@ -9,6 +9,8 @@ using OpenHardwareMonitor.Hardware;
 using System.Security.Cryptography.X509Certificates;
 using static Hardware_ToolBox.App;
 using System.Windows;
+using System.Windows.Media.Animation;
+using System.Windows.Controls;
 
 namespace Hardware_ToolBox.Detection_engine
 {
@@ -25,6 +27,61 @@ namespace Hardware_ToolBox.Detection_engine
             StringBuilder temp = new StringBuilder(500);
             App.GetPrivateProfileString(section, skey, "", temp, 500, path);
             return temp.ToString();
+        }
+        /// <summary>
+        /// 创建动画效果，起始值为对象当前值
+        /// </summary>
+        /// <param name="arrive">结束动画</param>
+        /// <param name="bar">要创建的对象</param>
+        public static void Animation(double arrive, ProgressBar bar)
+        {
+            DoubleAnimation doubleAnimation = new DoubleAnimation();
+            //设置From属性。
+            doubleAnimation.From = bar.Value;
+            //设置To属性。
+            doubleAnimation.To = arrive;
+            //设置Duration属性。
+            doubleAnimation.Duration = new Duration(TimeSpan.FromMilliseconds(300));
+            //为元素设置BeginAnimation方法。
+            bar.BeginAnimation(ProgressBar.ValueProperty, doubleAnimation);
+        }
+
+        /// <summary>
+        /// 截取字符串
+        /// </summary>
+        /// <param name="sourse">目标</param>
+        /// <param name="startstr">从这里</param>
+        /// <param name="endstr">到这里</param>
+        /// <returns>返回不包含"从这里","到这里"的字符串</returns>
+        public static string Substring(string sourse, string startstr, string endstr)
+        {
+            string result = string.Empty;
+            int startindex, endindex;
+            try
+            {
+                startindex = sourse.IndexOf(startstr);
+                if (startindex == -1)
+                {
+                    return result;
+                }
+                string tmpstr = sourse.Substring(startindex + startstr.Length);
+                endindex = tmpstr.IndexOf(endstr);
+                if (endindex == -1)
+                {
+                    return result;
+                }
+                result = tmpstr.Remove(endindex);
+            }
+            catch { }
+            return result;
+        }
+
+        public static string Combine_strings(string[] left, string[] right)
+        {
+            string str = "";
+            for (int i = 0; i < left.Length - 1; i ++)
+                str += left[i] + "：\t" + right[i];
+            return str;
         }
 
         static  UpdateVisitor updateVisitor = new UpdateVisitor();
@@ -46,6 +103,10 @@ namespace Hardware_ToolBox.Detection_engine
             //启动硬盘监测
             myComputer.HDDEnabled = false;
         }
+
+        static readonly PerformanceCounter cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
+        //static readonly PerformanceCounter ramCounter = new PerformanceCounter("Memory", "Available MBytes");
+        static readonly PerformanceCounter uptime = new PerformanceCounter("System", "System Up Time");
         //读取电脑各项参数
         public static string[] device_status()
         {
@@ -53,19 +114,21 @@ namespace Hardware_ToolBox.Detection_engine
 
             string[] parameter = new string[12];
 
-            parameter[0] = App.Processor().ToString ();//得到cpu占用
+            parameter[0] = cpuCounter.NextValue().ToString("F0");//得到cpu占用
             parameter[1] = Parameter_interception("GPU Core", "Load");//得到gpu占用
-            parameter[2] = App.ram().ToString();//得到内存占用
+            parameter[2] = RunCmd("\"" + AppDomain.CurrentDomain.BaseDirectory + "Memory usage detection.exe" + "\"" + " RAM");//得到内存占用
 
-            //parameter[3] = Parameter_interception("CPU", "000");
-            parameter[4] = Parameter_interception("CPU Core #1", "Clock");
-            parameter[5] = Parameter_interception("Bus Speed", "Clock");
+            parameter[4] = double.Parse(Parameter_interception("CPU Core #1", "Clock")).ToString("F2");
+            parameter[5] = double.Parse(Parameter_interception("Bus Speed", "Clock")).ToString("F2"); ;
             parameter[6] = Parameter_interception("温度", "000");
 
-            //parameter[7] = Parameter_interception("GPU型号", "000");
-            parameter[8] = Parameter_interception("GPU Core", "Clock");
-            parameter[9] = Parameter_interception("GPU Memory", "Clock");
-            parameter[10] = Parameter_interception("GPU Shader", "Clock");
+            uptime.NextValue();
+            TimeSpan ts = TimeSpan.FromSeconds(uptime.NextValue());
+            parameter[7] = ts.ToString(@"dd\.hh\:mm\:ss");
+
+            parameter[8] = double.Parse(Parameter_interception("GPU Core", "Clock")).ToString ("F2");
+            parameter[9] = double.Parse(Parameter_interception("GPU Memory", "Clock")).ToString("F2");
+            parameter[10] = double.Parse(Parameter_interception("GPU Shader", "Clock")).ToString("F2");
             parameter[11] = Parameter_interception("GPU Core", "Temperature");
 
             return parameter;
@@ -76,24 +139,13 @@ namespace Hardware_ToolBox.Detection_engine
             foreach (var hardwareItem in myComputer.Hardware)
             {
                 if (interception == hardwareItem.HardwareType.ToString())
-                {
                     return hardwareItem.Name;
-                }
-                //if (interception == "GPU型号" && hardwareItem.HardwareType.ToString().StartsWith ("Gpu"))
-                //{
-                //    return hardwareItem.Name;
-                //}
                 foreach (var sensor in hardwareItem.Sensors)
                 {
                     if (interception == sensor.Name && of == sensor.SensorType.ToString())
-                    {
                         return sensor.Value.ToString();
-                    }
-
                     if (interception == "温度" && sensor .Name .StartsWith("Core #1"))
-                    {
                         return sensor.Value.ToString();
-                    }
                 }
             }
             return "暂无信息";
@@ -102,7 +154,6 @@ namespace Hardware_ToolBox.Detection_engine
         //执行cmd命令，并返回执行结果
         public static string RunCmd(string command)
         {
-            //例Process
             Process p = new Process();
             p.StartInfo.FileName = "cmd.exe";         //确定程序名
             p.StartInfo.Arguments = "/c " + command;   //确定程式命令行
@@ -115,7 +166,6 @@ namespace Hardware_ToolBox.Detection_engine
             return p.StandardOutput.ReadToEnd();      //输出出流取得命令行结果果
         }
 
-
         public static bool Document_verification(string file)
         {
             try
@@ -124,19 +174,11 @@ namespace Hardware_ToolBox.Detection_engine
                 string f = cert.GetCertHashString();
                 //MessageBox.Show(cert.GetCertHashString());
                 if (f == "36A888B9F2A505BF92AC6B2796C2188E639AB1D1")
-                {
-                    return true;
-                }
+                { return true; }
                 else
-                {
-                    return false;
-                }
-
+                { return false; }
             }
-            catch
-            {
-                return false;
-            }
+            catch { return false; }
         }
 
         //private static string model(string name)

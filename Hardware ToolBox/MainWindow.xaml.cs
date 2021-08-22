@@ -21,6 +21,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using static Hardware_ToolBox.App;
+using System.Management;
+using System.Threading;
 
 namespace Hardware_ToolBox
 {
@@ -29,37 +31,55 @@ namespace Hardware_ToolBox
     /// </summary>
     public partial class MainWindow : Window
     {
+
         Initial_screen initial = new Initial_screen();//启动初始页面
         static int select_form = 0;//指定起始页和当前所在页面
         public MainWindow()
         {
             initial.Show();
             InitializeComponent();
-            //Me.Visibility = Visibility.Collapsed;
+            initial.加载.Text += "启动程序中...\n";
 
             主窗体.Visibility = Visibility.Hidden;
 
-            ////校验证书安装程序
-            //if (Read_and_write_files.Document_verification(Environment.CurrentDirectory + "/Security certificate installation/Certificate installation.exe") != true)
-            //{
-            //    Environment.Exit(0);
-            //}
+            string Absolute_path = AppDomain.CurrentDomain.BaseDirectory;
 
-            //校验自身
-            if (Read_and_write_files.Document_verification(Process.GetCurrentProcess().MainModule.FileName) != true)
+            initial.加载.Text += "校验程序完整性...\n";
+
+            //校验证书安装程序
+            if (Read_and_write_files.Document_verification(Environment.CurrentDirectory + "/Security certificate installation/Certificate installation.exe") != true)
             {
                 Environment.Exit(0);
             }
 
-            ////安全证书检测程序
-            //X509Store store = new X509Store(StoreName.Root, StoreLocation.LocalMachine);
-            //store.Open(OpenFlags.MaxAllowed);
-            //X509Certificate2Collection certs = store.Certificates.Find(X509FindType.FindByThumbprint, "36a888b9f2a505bf92ac6b2796c2188e639ab1d1",false);
-            //if (certs.Count == 0 || certs[0].NotAfter < DateTime.Now)
-            //{//如果不存在自动启动证书安装程序
-            //    Process.Start(Environment.CurrentDirectory + "/Security certificate installation/Certificate installation.exe");
-            //}
+            //校验自身
+            if (Read_and_write_files.Document_verification(Process.GetCurrentProcess().MainModule.FileName) != true)
+            {
+                //Environment.Exit(0);
+            }
 
+            //校验Configuration information程序，程序说明：用于检测软件基本配置信息
+            if (Read_and_write_files.Document_verification(AppDomain.CurrentDomain.BaseDirectory + @"Configuration information.exe") != true)
+            {
+                Environment.Exit(0);
+            }
+
+            //校验Memory usage detection程序，程序说明：用于快速获取CPU和内存占用率
+            if (Read_and_write_files.Document_verification(AppDomain.CurrentDomain.BaseDirectory + @"Memory usage detection.exe") != true)
+            {
+                Environment.Exit(0);
+            }
+
+            //安全证书检测程序
+            X509Store store = new X509Store(StoreName.Root, StoreLocation.LocalMachine);
+            store.Open(OpenFlags.MaxAllowed);
+            X509Certificate2Collection certs = store.Certificates.Find(X509FindType.FindByThumbprint, "36a888b9f2a505bf92ac6b2796c2188e639ab1d1", false);
+            if (certs.Count == 0 || certs[0].NotAfter < DateTime.Now)
+            {//如果不存在自动启动证书安装程序
+                Process.Start(Environment.CurrentDirectory + "/Security certificate installation/Certificate installation.exe");
+            }
+
+            initial.加载.Text += "开始检测硬件配置...\n";
             //启动后台检测硬件配置
             using (BackgroundWorker bw = new BackgroundWorker())
             {
@@ -68,6 +88,7 @@ namespace Hardware_ToolBox
             }
 
             Read_and_write_files.initialization();//启动检测引擎初始化
+
             //后台刷新硬件数据 1秒/次
             System.Timers.Timer t = new System.Timers.Timer(1000);//实例化Timer类用于更新时间
             t.Elapsed += new System.Timers.ElapsedEventHandler(Occupancy_rate);//到达时间的时候执行事件
@@ -91,141 +112,154 @@ namespace Hardware_ToolBox
             #endregion
             select_on(select_form);//指定第一次启动的界面
 
-            //隐藏界面
-            #region
-            注册表清理框.Visibility = Visibility.Visible;
-            常规清理框.Visibility = Visibility.Collapsed;
-            高级清理框.Visibility = Visibility.Collapsed;
-            系统瘦身框.Visibility = Visibility.Collapsed;
-            大文件扫描框.Visibility = Visibility.Collapsed;
-            #endregion
-            //勾选系统清理下的所有复选框
-            for (int i = 1;i <= 31;i ++)
-            {
-                object o = this.GetType().GetField("注册表" + i.ToString(), System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.IgnoreCase).GetValue(this);
-                ((CheckBox)o).IsChecked = true;
-            }
-
-            注册表清理.IsChecked = true;
         }
         public void Occupancy_rate(object source, System.Timers.ElapsedEventArgs e)
         {
             if (界面1 .Visibility == Visibility.Visible )//在界面可见时
             {
-                string[] Happening = new string[12];
-                Happening = Read_and_write_files.device_status();
-                Dispatcher.Invoke(new Action(delegate
+                string[] Happening = Read_and_write_files.device_status();//获取数据
+                Dispatcher.Invoke(new Action(delegate//同步线程
                 {
+                    //写入占用率
                     处理器占用.Content = "CPU利用率：" + Happening[0] + " %";
-                    处理器占用条.Value = double.Parse(Happening[0]);
+                    Read_and_write_files .Animation(double.Parse(Happening[0]), 处理器占用条);
 
-                    显卡占用.Content = "GPU利用率：" + Happening[1] + " %";
-                    显卡占用条.Value = double.Parse(Happening[1]);
+                    显卡占用.Content =   "GPU利用率：" + Happening[1] + " %";
+                    Read_and_write_files.Animation(double.Parse(Happening[1]), 显卡占用条);
 
-                    内存占用.Content = "内存利用率：" + Happening[2] + " %";
-                    内存占用条.Value = double.Parse(Happening[2]);
+                    内存占用.Content =   "内存利用率：" + Happening[2]+ " %";
+                    Read_and_write_files.Animation(double.Parse(Happening[2]), 内存占用条);
 
-                    CPU信息.Content =  Happening[4] + " MHz" +
+                    //写入CPU信息
+                    CPU信息.Content = Happening[4]  + " MHz" +
                                 "\n" + Happening[5] + " MHz" +
-                                "\n" + Happening[6] + " °C";
+                                "\n" + Happening[6] + " °C" +
+                                "\n" + Happening[7].Replace(".",":");
 
-                    GPU信息.Content =  Happening[8] + " MHz" +
-                                "\n" + Happening[9] + " MHz" +
+                    //写入GPU信息
+                    GPU信息.Content =  Happening[8]  + " MHz" +
+                                "\n" + Happening[9]  + " MHz" +
                                 "\n" + Happening[10] + " MHz" +
                                 "\n" + Happening[11] + " °C"; 
-
                 }));
             }
         }
 
         void Hardware_information(object sender, DoWorkEventArgs e)
         {
-            //读取基本配置信息
-            string str = App.Hwinfo(System.AppDomain.CurrentDomain.BaseDirectory + @"\Comprehensive information.ini", System.AppDomain.CurrentDomain.BaseDirectory);
-            //获取当前目录下的ini文件路径
-            string file = System.AppDomain.CurrentDomain.BaseDirectory + @"\Comprehensive information.ini";
-            //读取内存信息
-            App.Memory_information();
-            //存储各项电脑参数
-            string[] data = new string[45];
-
-            //读取基本参数
-            #region
-            //系统
-            data[0] = Read_and_write_files.IniReadValue("系统", "版本", file);
-            data[1] = Read_and_write_files.IniReadValue("系统", "Build", file);
-            data[2] = Read_and_write_files.IniReadValue("系统", "系统位宽", file);
-            //内存
-            data[3] = Read_and_write_files.IniReadValue("内存信息", "物理内存总数", file) + " MB";
-            data[4] = Read_and_write_files.IniReadValue("内存信息", "物理内存可用", file) + " MB";
-            data[5] = Read_and_write_files.IniReadValue("内存信息", "分页文件总数", file) + " MB";
-            data[6] = Read_and_write_files.IniReadValue("内存信息", "分页文件可用", file) + " MB";
-            data[7] = Read_and_write_files.IniReadValue("内存信息", "虚拟内存总数", file) + " MB";
-            data[8] = Read_and_write_files.IniReadValue("内存信息", "虚拟内存可用", file) + " MB";
-            string 系统inf = "";
-            for (int i = 0; i <= 8; i++) { 系统inf += data[i] + "\n"; }
-            //显卡
-            data[9] = Read_and_write_files.IniReadValue("显卡", "显卡1型号", file);
-            data[10] = Read_and_write_files.IniReadValue("显卡", "显卡1厂商", file);
-            data[11] = Read_and_write_files.IniReadValue("显卡", "显卡1驱动版本", file);
-            data[12] = Read_and_write_files.IniReadValue("显卡", "显卡1ID", file);
-            data[13] = Read_and_write_files.IniReadValue("显卡", "显卡1显存", file);
-            data[14] = Read_and_write_files.IniReadValue("显卡", "显卡1步进", file);
-            //显示器
-            data[15] = Read_and_write_files.IniReadValue("显示器", "显示器1型号_测试版", file);
-            data[16] = Read_and_write_files.IniReadValue("显示器", "显示器1ID", file);
-            data[17] = Read_and_write_files.IniReadValue("显示器", "显示器1尺寸", file);
-            data[18] = Read_and_write_files.IniReadValue("显示器", "显示器1宽度", file) + " * " + Read_and_write_files.IniReadValue("显示器", "显示器1高度", file); ;
-            data[19] = Read_and_write_files.IniReadValue("显示器", "显示器1生产日期", file);
-            data[20] = Read_and_write_files.IniReadValue("显示器", "显示器1edid版本", file);
-            data[21] = Read_and_write_files.IniReadValue("显示器", "显示器1序列号_测试版", file);
-            string 显卡inf = "";
-            for (int i = 9; i <= 21; i++) { 显卡inf += data[i] + "\n"; }
-            //处理器
-            data[22] = Read_and_write_files.IniReadValue("处理器", "处理器型号", file);
-            data[23] = Read_and_write_files.IniReadValue("处理器", "处理器架构", file);
-            data[24] = Read_and_write_files.IniReadValue("处理器", "处理器厂商", file);
-            data[25] = Read_and_write_files.IniReadValue("处理器", "处理器接口", file);
-            data[26] = Read_and_write_files.IniReadValue("处理器", "处理器核心数", file) + " 个";
-            data[27] = Read_and_write_files.IniReadValue("处理器", "处理器线程数", file) + " 个";
-            data[28] = Read_and_write_files.IniReadValue("处理器", "处理器位宽", file);
-            data[29] = Read_and_write_files.IniReadValue("处理器", "处理器主频", file);
-            data[30] = Read_and_write_files.IniReadValue("处理器", "处理器外频", file);
-            data[31] = "暂时无法获取";
-            data[32] = Read_and_write_files.IniReadValue("处理器", "处理器数量", file);
-            data[33] = Read_and_write_files.IniReadValue("缓存", "缓存1类型", file);
-            data[34] = Read_and_write_files.IniReadValue("缓存", "缓存1容量", file) + " KB";
-            data[35] = Read_and_write_files.IniReadValue("缓存", "缓存2类型", file);
-            data[36] = Read_and_write_files.IniReadValue("缓存", "缓存2容量", file) + " KB";
-            data[37] = Read_and_write_files.IniReadValue("缓存", "缓存3类型", file);
-            data[38] = Read_and_write_files.IniReadValue("缓存", "缓存3容量", file) + " KB";
-            data[39] = Read_and_write_files.IniReadValue("缓存", "缓存4类型", file);
-            data[40] = Read_and_write_files.IniReadValue("缓存", "缓存4容量", file) + " KB";
-            string 处理器inf = "";
-            for (int i = 22; i <= 40; i++) { 处理器inf += data[i] + "\n"; }
-            //bios芯片
-            data[41] = Read_and_write_files.IniReadValue("BIOS", "厂商", file);
-            data[42] = Read_and_write_files.IniReadValue("BIOS", "说明", file);
-            data[43] = Read_and_write_files.IniReadValue("BIOS", "版本", file);
-            data[44] = Read_and_write_files.IniReadValue("BIOS", "OEM版本", file);
-            string BIOSinf = "";
-            for (int i = 41; i <= 44; i++) { BIOSinf += data[i] + "\n"; }
-            #endregion
-
-            //删除检测文件
-            File.Delete(System.AppDomain.CurrentDomain.BaseDirectory + @"\Comprehensive information.ini");
-            File.Delete(System.AppDomain.CurrentDomain.BaseDirectory + @"\PnPDevice.ini");
-
-            Dispatcher.Invoke(new Action(delegate
+            try
             {
-                电脑基本信息.Text = str;
-                操作系统信息.Text = 系统inf;
-                显卡显示器信息.Text = 显卡inf;
-                中央处理器信息.Text = 处理器inf;
-                bios信息.Text = BIOSinf;
-                initial.Close();
+                //读取基本配置信息
+
+                string Absolute_path = AppDomain.CurrentDomain.BaseDirectory;//获得自己的绝对目录路径
+
+                string str = Read_and_write_files.RunCmd("\"" + Absolute_path + "Configuration information.exe" + "\"");//获得信息摘要
+
+                string file = AppDomain.CurrentDomain.BaseDirectory + @"\Comprehensive information.ini";//设置ini文件目录
+
+                //存储各项电脑参数
+                string[] data = new string[46];
+                //读取基本参数
+                #region
+                Dispatcher.Invoke(new Action(delegate { initial.加载.Text += "检测系统配置...\n"; }));
+                //系统
+                data[0] = Read_and_write_files.IniReadValue("系统", "版本", file);
+                data[1] = Read_and_write_files.IniReadValue("系统", "Build", file);
+                data[2] = Read_and_write_files.IniReadValue("系统", "系统位宽", file);
+                //内存
+                string temp = Read_and_write_files.RunCmd("\"" + Environment.CurrentDirectory + "/Security certificate installation/Configuration detection.exe" + "\"" + " Detect -m");
+                data[3] = Read_and_write_files.Substring(temp, "注册用户：", "<-");
+                data[4] = Read_and_write_files.IniReadValue("内存信息", "物理内存总数", file) + " MB";
+                //data[4] = Read_and_write_files.IniReadValue("内存信息", "物理内存可用", file) + " MB";
+                data[5] = Read_and_write_files.IniReadValue("内存信息", "分页文件总数", file) + " MB";
+                //data[6] = Read_and_write_files.IniReadValue("内存信息", "分页文件可用", file) + " MB";
+                data[6] = Read_and_write_files.IniReadValue("内存信息", "虚拟内存总数", file) + " MB";
+                //data[8] = Read_and_write_files.IniReadValue("内存信息", "虚拟内存可用", file) + " MB";
+                data[7] = Read_and_write_files.Substring(temp, "计算机名称：", "<-");
+                data[8] = Read_and_write_files.Substring(temp, "序列号：", "<-");
+                string 系统inf = "";
+                for (int i = 0; i <= 8; i++) { if (data[i] != "") { 系统inf += data[i] + "\n"; }else { 系统inf += "暂无信息" + "\n"; }; }
+                Dispatcher.Invoke(new Action(delegate { initial.加载.Text += "检测显示适配器...\n"; }));
+                //显卡
+                data[9] = Read_and_write_files.IniReadValue("显卡", "显卡1型号", file);
+                data[10] = Read_and_write_files.IniReadValue("显卡", "显卡1厂商", file);
+                data[11] = Read_and_write_files.IniReadValue("显卡", "显卡1驱动版本", file);
+                data[12] = Read_and_write_files.IniReadValue("显卡", "显卡1ID", file);
+                data[13] = Read_and_write_files.IniReadValue("显卡", "显卡1显存", file);
+                data[14] = Read_and_write_files.IniReadValue("显卡", "显卡1步进", file);
+                Dispatcher.Invoke(new Action(delegate { initial.加载.Text += "检测监视器...\n"; }));
+                //显示器
+                temp = Read_and_write_files.RunCmd("\"" + Environment.CurrentDirectory + "/Security certificate installation/Configuration detection.exe" + "\"" + " Detect -x");
+                data[15] = Read_and_write_files.IniReadValue("显示器", "显示器1型号_测试版", file);
+                data[16] = Read_and_write_files.IniReadValue("显示器", "显示器1ID", file);
+                data[17] = Read_and_write_files.IniReadValue("显示器", "显示器1尺寸", file);
+                data[18] = Read_and_write_files.IniReadValue("显示器", "显示器1宽度", file) + " * " + Read_and_write_files.IniReadValue("显示器", "显示器1高度", file); ;
+                data[19] = Read_and_write_files.IniReadValue("显示器", "显示器1生产日期", file);
+                data[20] = Read_and_write_files.IniReadValue("显示器", "显示器1edid版本", file);
+                data[21] = Read_and_write_files.Substring(temp, "当前显示模式：", "<-") + 
+                    "\n" + Read_and_write_files.Substring(temp, "DAC类型：", "<-");
+                string 显卡inf = "";
+                for (int i = 9; i <= 21; i++) { if (data[i] != "") { 显卡inf += data[i] + "\n"; } else { 显卡inf += "暂无信息" + "\n"; }; }
+                Dispatcher.Invoke(new Action(delegate { initial.加载.Text += "检测处理器...\n"; }));
+                //处理器
+                temp = Read_and_write_files.RunCmd("\"" + Environment.CurrentDirectory + "/Security certificate installation/Configuration detection.exe" + "\"" + " Detect -p");
+                data[22] = Read_and_write_files.IniReadValue("处理器", "处理器型号", file);
+                data[23] = Read_and_write_files.IniReadValue("处理器", "处理器架构", file);
+                data[24] = Read_and_write_files.IniReadValue("处理器", "处理器厂商", file);
+                data[25] = Read_and_write_files.IniReadValue("处理器", "处理器接口", file);
+                data[26] = Read_and_write_files.IniReadValue("处理器", "处理器核心数", file) + " 个";
+                data[27] = Read_and_write_files.IniReadValue("处理器", "处理器线程数", file) + " 个";
+                data[28] = Read_and_write_files.IniReadValue("处理器", "处理器位宽", file);
+                data[29] = Read_and_write_files.IniReadValue("处理器", "处理器主频", file);
+                data[30] = Read_and_write_files.IniReadValue("处理器", "处理器外频", file);
+                data[31] = Read_and_write_files.Substring(temp, "虚拟化支持：", "<-").Replace("True", "已启用").Replace("False", "已禁用");
+                data[32] = Read_and_write_files.IniReadValue("处理器", "处理器数量", file) + " 颗处理器";
+                //data[33] = Read_and_write_files.IniReadValue("缓存", "缓存1类型", file);
+                data[33] = Read_and_write_files.IniReadValue("缓存", "缓存1容量", file) + " KB";
+                //data[35] = Read_and_write_files.IniReadValue("缓存", "缓存2类型", file);
+                data[34] = Read_and_write_files.IniReadValue("缓存", "缓存2容量", file) + " KB";
+                //data[37] = Read_and_write_files.IniReadValue("缓存", "缓存3类型", file);
+                data[35] = Read_and_write_files.IniReadValue("缓存", "缓存3容量", file) + " KB";
+                data[36] = Read_and_write_files.Substring(temp, "CPU电压：", "<-").Substring(0, 1) + "." + Read_and_write_files.Substring(temp, "CPU电压：", "<-").Substring(1, 1) + " v";
+                data[37] = (int.Parse(Read_and_write_files.IniReadValue("内存信息", "物理内存总数", file)) / 1000).ToString() + " GB";
+                data[38] = Read_and_write_files.IniReadValue("内存", "数量", file) + " 个";
+                data[39] = Read_and_write_files.Substring(temp, "Hyper-V支持：", "<-").Replace("True", "已启用").Replace("False", "已禁用");
+                data[40] = Read_and_write_files.Substring(temp, "CPU编号：", "<-").Trim();
+                string 处理器inf = "";
+                for (int i = 22; i <= 40; i++) { if (data[i] != "") { 处理器inf += data[i] + "\n"; } else { 处理器inf += "暂无信息" + "\n"; }; }
+                Dispatcher.Invoke(new Action(delegate { initial.加载.Text += "检测BIOS芯片...\n"; }));
+                //bios芯片
+                data[41] = Read_and_write_files.IniReadValue("BIOS", "厂商", file);
+                data[42] = Read_and_write_files.IniReadValue("BIOS", "说明", file);
+                data[43] = Read_and_write_files.IniReadValue("BIOS", "版本", file);
+                data[44] = Read_and_write_files.IniReadValue("BIOS", "OEM版本", file);
+                string BIOSinf = "";
+                for (int i = 41; i <= 44; i++) { if (data[i] != "") { BIOSinf += data[i] + "\n"; } else { BIOSinf += "暂无信息" + "\n"; }; }
+                #endregion
+
+                //删除检测文件
+                Dispatcher.Invoke(new Action(delegate{ initial.加载.Text += "删除临时文件...\n"; }));    
+                File.Delete(System.AppDomain.CurrentDomain.BaseDirectory + @"\Comprehensive information.ini");
+                File.Delete(System.AppDomain.CurrentDomain.BaseDirectory + @"\PnPDevice.ini");
+                Dispatcher.Invoke(new Action(delegate
+                {
+                    电脑基本信息.Text = str;
+                    操作系统信息.Text = 系统inf;
+                    显卡显示器信息.Text = 显卡inf;
+                    中央处理器信息.Text = 处理器inf;
+                    bios信息.Text = BIOSinf;
+                    动画播放("程序启动");
+                    initial.Close();
+                }));
+
+            }
+            catch (Exception ex)
+            {
+                Dispatcher.Invoke(new Action(delegate { initial.Close(); }));
+                MessageBox.Show(ex.ToString());
                 动画播放("程序启动");
-            }));
+            }
+
         }
 
         //播放动画函数
@@ -247,7 +281,7 @@ namespace Hardware_ToolBox
             if (小方块.Opacity == 0)
             {
                 动画播放("小人跳");
-                金币.Content = "金币+" + currency.ToString() + "...";
+                金币.Content = "节操 + " + currency.ToString() + "...";
                 currency++;
             }
         }
@@ -265,36 +299,6 @@ namespace Hardware_ToolBox
         private void 黑幕_MouseUp(object sender, MouseButtonEventArgs e)
         {
             if (黑幕.Opacity == 1) { 动画播放("菜单关闭"); }
-        }
-
-        private void 常规清理_Click(object sender, RoutedEventArgs e)
-        {
-            hide();
-            常规清理框.Visibility = Visibility.Visible;
-        }
-
-        private void 注册表清理_Click(object sender, RoutedEventArgs e)
-        {
-            hide();
-            注册表清理框.Visibility = Visibility.Visible;
-        }
-
-        private void 高级清理_Click(object sender, RoutedEventArgs e)
-        {
-            hide();
-            高级清理框.Visibility = Visibility.Visible;
-        }
-
-        private void 系统瘦身_Click(object sender, RoutedEventArgs e)
-        {
-            hide();
-            系统瘦身框.Visibility = Visibility.Visible;
-        }
-
-        private void 大文件扫描_Click(object sender, RoutedEventArgs e)
-        {
-            hide();
-            大文件扫描框.Visibility = Visibility.Visible;
         }
 
         private void 关闭_MouseUp(object sender, MouseButtonEventArgs e)
@@ -425,18 +429,6 @@ namespace Hardware_ToolBox
                     动画播放("界面10关闭");
                     break;
             }
-        }
-        #endregion
-
-        //隐藏其他界面
-        #region
-        private void hide()
-        {
-            注册表清理框.Visibility = Visibility.Collapsed;
-            常规清理框.Visibility = Visibility.Collapsed;
-            高级清理框.Visibility = Visibility.Collapsed;
-            系统瘦身框.Visibility = Visibility.Collapsed;
-            大文件扫描框.Visibility = Visibility.Collapsed;
         }
         #endregion
 
@@ -697,8 +689,6 @@ namespace Hardware_ToolBox
             Process.Start(Environment.CurrentDirectory + @"\Software catalog\B站视频下载\B站视频下载工具 3.5.exe");
         }
 
-
-
         private void image_MouseUp(object sender, MouseButtonEventArgs e)
         {
             Process.Start(Environment.CurrentDirectory + @"\Software catalog\CPU-Z\CUP-Z.exe");
@@ -899,6 +889,16 @@ namespace Hardware_ToolBox
             Process.Start(Environment.CurrentDirectory + @"\Software catalog\局域网查看器\局域网查看器.exe");
         }
 
+        private void image_Copy78_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\ICON图标转换\ICO图标转换(64位).exe");
+        }
+
+        private void image_Copy79_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\文件信息摘要生成\文件信息摘要生成(64位).exe");
+        }
+
 
         #endregion
 
@@ -906,82 +906,82 @@ namespace Hardware_ToolBox
         #region
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://s.threatbook.cn/");
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\关联图标\修复空白图标-重新关联.exe");
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://graph.baidu.com/pcpage/index?tpl_from=pc");
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\批处理\清理系统垃圾文件.exe");
         }
 
         private void button_Copy1_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://greasyfork.org/zh-CN");
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\批处理\测试网络.exe");
         }
 
         private void button_Copy2_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://plugin.speedtest.cn/#/");
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\批处理\文件系统.exe");
         }
 
         private void button_Copy3_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.yinsiduanxin.com/");
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\批处理\系统完整.exe");
         }
 
         private void button_Copy4_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://msdn.itellyou.cn/");
+            Process.Start(Environment.CurrentDirectory + @"\Software catalog\批处理\清理SxS.exe");
         }
 
         private void button_Copy5_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.aconvert.com/cn/icon/png-to-ico/");
+
         }
 
         private void button_Copy6_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.cn-ki.net/");
+
         }
 
         private void button_Copy7_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.uupoop.com/#/old");
+
         }
 
         private void button_Copy8_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.bilibili.com/");
+
         }
 
         private void button_Copy9_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://github.com/github/");
+
         }
 
         private void button_Copy10_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.githubs.cn/");
+
         }
 
         private void button_Copy11_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("http://www.gnet.com.cn/include/voice/voice.php");
+
         }
 
         private void button_Copy12_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.toolnb.com/");
+
         }
 
         private void button_Copy13_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://uhdpixel.com/");
+
         }
 
         private void button_Copy14_Click(object sender, RoutedEventArgs e)
         {
-            Process.Start("https://www.asklib.com/");
+
         }
         #endregion
 
@@ -1049,12 +1049,12 @@ namespace Hardware_ToolBox
 
         private void Button_Click_13(object sender, RoutedEventArgs e)
         {
-            Read_and_write_files.RunCmd(@"%windir%\regedit.exe");
+            Read_and_write_files.RunCmd(@"%windir%\system32\perfmon.exe /res");
         }
 
         private void Button_Click_14(object sender, RoutedEventArgs e)
         {
-            Read_and_write_files.RunCmd(@"%windir%\system32\secpol.msc /s");
+            Read_and_write_files.RunCmd(@"%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe");
         }
 
         private void Button_Click_15(object sender, RoutedEventArgs e)
@@ -1191,5 +1191,42 @@ namespace Hardware_ToolBox
         }
         #endregion
 
+        //复制配置信息部分
+        #region
+        private void 关闭1_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            小提示信息.Content = "复制成功！";
+            动画播放("提示打开");
+            Clipboard.SetText(电脑基本信息.Text);
+        }
+
+        private void 关闭2_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            小提示信息.Content = "复制成功！";
+            动画播放("提示打开");
+            Clipboard.SetText(Read_and_write_files.Combine_strings(操作系统信息名称.Text.Split('：'), 操作系统信息.Text.Split('\n'))); 
+        }
+
+        private void 关闭4_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            小提示信息.Content = "复制成功！";
+            动画播放("提示打开");
+            Clipboard.SetText(Read_and_write_files.Combine_strings(中央处理器信息名称.Text.Split('：'), 中央处理器信息.Text.Split('\n')));
+        }
+
+        private void 关闭3_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            小提示信息.Content = "复制成功！";
+            动画播放("提示打开");
+            Clipboard.SetText(Read_and_write_files.Combine_strings(显卡显示器信息名称.Text.Split('：'), 显卡显示器信息.Text.Split('\n')));
+        }
+
+        private void 关闭5_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            小提示信息.Content = "复制成功！";
+            动画播放("提示打开");
+            Clipboard.SetText(Read_and_write_files.Combine_strings(bios信息名称.Text.Split('：'), bios信息.Text.Split('\n')));
+        }
+        #endregion
     }
 }

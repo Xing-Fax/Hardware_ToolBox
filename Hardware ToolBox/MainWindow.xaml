@@ -2152,6 +2152,50 @@
                 <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
+        <Storyboard x:Key="放大93">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image_Copy78">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image_Copy78">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小93">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image_Copy78">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image_Copy78">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="放大94">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image_Copy79">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image_Copy79">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小94">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="image_Copy79">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="image_Copy79">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
         <Storyboard x:Key="小人跳">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="菜单背景">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0">
@@ -2238,6 +2282,35 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.017" Value="0"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.633" Value="1"/>
             </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="提示打开">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="小提示">
+                <SplineDoubleKeyFrame KeyTime="0" Value="4.5"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:4.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="小提示">
+                <EasingThicknessKeyFrame KeyTime="0" Value="535,704,535,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="535,590,535,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+                <EasingThicknessKeyFrame KeyTime="0:0:4.5" Value="535,590,535,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:5" Value="535,707,535,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="小提示">
+                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Visible}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:0.3" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -2792,16 +2865,29 @@
             <BeginStoryboard x:Name="缩小92_BeginStoryboard" Storyboard="{StaticResource 缩小92}"/>
         </EventTrigger>
 
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="image_Copy78">
+            <BeginStoryboard x:Name="放大93_BeginStoryboard" Storyboard="{StaticResource 放大93}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="image_Copy78">
+            <BeginStoryboard x:Name="缩小93_BeginStoryboard" Storyboard="{StaticResource 缩小93}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="image_Copy79">
+            <BeginStoryboard x:Name="放大94_BeginStoryboard" Storyboard="{StaticResource 放大94}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="image_Copy79">
+            <BeginStoryboard x:Name="缩小94_BeginStoryboard" Storyboard="{StaticResource 缩小94}"/>
+        </EventTrigger>
+
     </Window.Triggers>
     <Grid>
         <Rectangle x:Name="背景" Fill="#FFF4F4F5" Stroke="Black" StrokeThickness="0" ClipToBounds="True" SnapsToDevicePixels="True" RadiusX="5" RadiusY="5"/>
-        <Image x:Name="背景图片" HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="1310" Margin="-10,0,-20,-10" Source="Resources/背景1.jpg" Stretch="Fill" Clip="M10,5 C10,2.2385763 12.238576,0 15,0 L1285,0 C1287.7614,0 1290,2.2385763 1290,5 L1290,695 C1290,697.76142 1287.7614,700 1285,700 L15,700 C12.238576,700 10,697.76142 10,695 z">
+        <Image x:Name="背景图片" HorizontalAlignment="Left" Height="710" VerticalAlignment="Top" Width="1310" Margin="-10,0,-20,-10" Source="Resources/背景.jpg" Stretch="Fill" Clip="M10,5 C10,2.2385763 12.238576,0 15,0 L1285,0 C1287.7614,0 1290,2.2385763 1290,5 L1290,695 C1290,697.76142 1287.7614,700 1285,700 L15,700 C12.238576,700 10,697.76142 10,695 z">
             <Image.Effect>
                 <BlurEffect/>
             </Image.Effect>
         </Image>
         <Canvas x:Name="标题" Margin="0,0,0,631" d:IsEffectDisabled="True">
-            <Rectangle x:Name="标题背景" Fill="#FFF06292" HorizontalAlignment="Left" Height="95" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="1280" Clip="M0,-61 L1280,-61 L1280,69 L0,69 z" RadiusX="5" RadiusY="5"/>
+            <Rectangle x:Name="标题背景" HorizontalAlignment="Left" Height="95" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top" Width="1280" Clip="M0,-61 L1280,-61 L1280,69 L0,69 z" RadiusX="5" RadiusY="5" Fill="#FF0288D1"/>
             <materialDesign:ColorZone x:Name="标题栏"
                 Mode="Inverted"
                 Padding="16" Background="{x:Null}" MouseMove="标题栏_MouseMove" Width="1280">
@@ -2848,84 +2934,103 @@
                 <materialDesign:Card x:Name="card"
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
                     Padding="9,32,32,32" Height="266" Width="470" Background="White" Opacity="0.7" />
-                <ListBox HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="32" Canvas.Left="428" Canvas.Top="10" HorizontalContentAlignment="Center" Padding="0,6,0,0">
-                    <materialDesign:PackIcon ToolTip="复制信息到剪切板" Kind="ContentCopy" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-6,0,0"/>
-                </ListBox>
                 <materialDesign:PackIcon Kind="CodeGreaterThanOrEqual" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
                 <Label Content="计算机基本信息：" Canvas.Left="36" Canvas.Top="10" Width="143" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
-                <ScrollViewer Height="220.49" Width="450" Canvas.Left="10" Canvas.Top="35.51">
-                    <TextBlock x:Name="电脑基本信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify"><Run Text="处理器"/><Run Text="："/><Run Text=" 待获取..."/><LineBreak/><Run Text="主板："/><Run Text="     待获取..."/><LineBreak/><Run Text="内存："/><Run Text="     待获取..."/><LineBreak/><Run Text="显卡："/><Run Text="     待获取..."/><LineBreak/><Run Text="显示器："/><Run Text=" 待获取..."/><LineBreak/><Run Text="硬盘："/><Run Text="     待获取..."/><LineBreak/><Run Text="声卡："/><Run Text="     待获取..."/><LineBreak/><Run Text="网卡："/><Run Text="     待获取..."/></TextBlock>
+                <ScrollViewer Height="220.49" Width="450" Canvas.Left="10" Canvas.Top="35.51" RenderTransformOrigin="0,0">
+                    <TextBlock x:Name="电脑基本信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify"><Run Text="处理器"/><Run Text="："/><Run Text=" 待获取..."/><LineBreak/><Run Text="主板："/><Run Text="     待获取..."/><LineBreak/><Run Text="内存："/><Run Text="     待获取..."/><LineBreak/><Run Text="显卡："/><Run Text="     待获取..."/><LineBreak/><Run Text="显示器："/><Run Text=" 待获取..."/><LineBreak/><Run Text="硬盘："/><Run Text="     待获取..."/><LineBreak/><Run Text="声卡："/><Run Text="     待获取..."/><LineBreak/><Run Text="网卡："/><Run Text="     待获取."/><Run Text=".."/></TextBlock>
                 </ScrollViewer>
+                <ListBox x:Name="复制信息1" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="430">
+                    <ListBoxItem x:Name="关闭1" ToolTip="关闭程序" Width="40" Height="40" Cursor="Hand" MouseUp="关闭1_MouseUp">
+                        <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                    </ListBoxItem>
+                </ListBox>
             </Canvas>
             <Canvas x:Name="运行状态卡" Margin="10,281,795,10">
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                    Padding="32" Width="470" Height="325" Canvas.Top="10" Opacity="{Binding Opacity, ElementName=card}" />
-                <ListBox HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="32" HorizontalContentAlignment="Center" Padding="0,6,0,0" Canvas.Left="428" Canvas.Top="21.483">
-                    <materialDesign:PackIcon ToolTip="复制信息到剪切板" Kind="ContentCopy" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-6,0,0"/>
-                </ListBox>
-                <ProgressBar x:Name="处理器占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="75.8" Foreground="{Binding Fill, ElementName=标题背景}" Background="Gainsboro" BorderBrush="{Binding Foreground, ElementName=处理器占用条}"/>
+                    Padding="32" Width="470" Height="330" Canvas.Top="10" Opacity="{Binding Opacity, ElementName=card}" />
+                <ProgressBar x:Name="处理器占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="75.8" Foreground="{Binding Fill, ElementName=标题背景}" BorderBrush="{Binding Foreground, ElementName=处理器占用条}" SmallChange="1">
+                    <ProgressBar.Background>
+                        <SolidColorBrush Color="Gainsboro" Opacity="0.4"/>
+                    </ProgressBar.Background>
+                </ProgressBar>
                 <materialDesign:PackIcon Kind="CogSync" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Canvas.Left="10" Canvas.Top="20.483" Foreground="Black"/>
                 <Label Content="计算机运行状态：" Height="28.25" Width="139" Canvas.Left="36" Canvas.Top="18.233" FontSize="16" FontWeight="Bold" Foreground="#FD000000" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
                 <Label x:Name="处理器占用" Content="CPU利用率：      待获取..." Canvas.Left="10" Canvas.Top="48.733" FontWeight="Bold" FontSize="14" Width="165" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
                 <Label x:Name="内存占用" Content="RAM利用率：      待获取..." Canvas.Left="10" Canvas.Top="167.733" FontWeight="Bold" FontSize="14" Width="165" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
-                <ProgressBar x:Name="内存占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="194.8" Foreground="{Binding Fill, ElementName=标题背景}" Background="Gainsboro" BorderBrush="{Binding Foreground, ElementName=内存占用条}"/>
+                <ProgressBar x:Name="内存占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="194.8" Foreground="{Binding Fill, ElementName=标题背景}" BorderBrush="{Binding Foreground, ElementName=内存占用条}" SmallChange="1">
+                    <ProgressBar.Background>
+                        <SolidColorBrush Color="Gainsboro" Opacity="0.4"/>
+                    </ProgressBar.Background>
+                </ProgressBar>
                 <Label x:Name="显卡占用" Content="GPU利用率：      待获取..." Canvas.Left="10" Canvas.Top="107.733" FontWeight="Bold" FontSize="14" Width="165" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
-                <ProgressBar x:Name="显卡占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="134.8" Foreground="{Binding Fill, ElementName=标题背景}" Background="Gainsboro" BorderBrush="{Binding Foreground, ElementName=内存占用条}"/>
-                <Grid Height="64" Width="455" Canvas.Left="10" Canvas.Top="271">
-                    <Label x:Name="CPU参数" Content="CPU主频：&#xA;CPU外频：&#xA;CPU二极管：" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="85" Height="100" Margin="0,-46,0,0"/>
-                    <Label x:Name="CPU信息" Content="待获取...&#xA;待获取...&#xA;待获取..." HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="140" Height="100" Margin="85,-46,0,0"/>
-                    <Label x:Name="GPU参数" Content="GPU主频：&#xA;显存频率：&#xA;着色器频率：&#xA;GPU二极管：&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="90" Height="100" Margin="225,-46,0,0"/>
-                    <Label x:Name="GPU信息" Content="待获取...&#xA;待获取...&#xA;待获取...&#xA;待获取..." HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="140" Height="100" Margin="315,-46,0,0"/>
+                <ProgressBar x:Name="显卡占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="134.8" Foreground="{Binding Fill, ElementName=标题背景}" BorderBrush="{Binding Foreground, ElementName=内存占用条}" SmallChange="1">
+                    <ProgressBar.Background>
+                        <SolidColorBrush Color="Gainsboro" Opacity="0.4"/>
+                    </ProgressBar.Background>
+                </ProgressBar>
+                <Grid Height="115" Width="455" Canvas.Left="10" Canvas.Top="220">
+                    <Label x:Name="CPU参数" Content="CPU主频：&#xA;CPU外频：&#xA;CPU二极管：&#xD;&#xA;运行时间：" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="85" Height="115"/>
+                    <Label x:Name="CPU信息" Content="待获取...&#xA;待获取...&#xA;待获取...&#xD;&#xA;待获取..." HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="140" Height="100" Margin="85,0,0,0"/>
+                    <Label x:Name="GPU参数" Content="GPU主频：&#xA;显存频率：&#xA;着色器频率：&#xA;GPU二极管：&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="90" Height="115" Margin="225,0,0,0"/>
+                    <Label x:Name="GPU信息" Content="待获取...&#xA;待获取...&#xA;待获取...&#xA;待获取..." HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="140" Height="100" Margin="315,0,0,0"/>
                 </Grid>
             </Canvas>
             <Canvas x:Name="操作系统" Margin="500,10,430,366">
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
                     Padding="9,32,32,32" Height="246" Width="345" Opacity="{Binding Opacity, ElementName=card}" />
-                <ListBox HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="32" HorizontalContentAlignment="Center" Padding="0,6,0,0" Canvas.Left="303" Canvas.Top="10">
-                    <materialDesign:PackIcon ToolTip="复制信息到剪切板" Kind="ContentCopy" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-6,0,0"/>
-                </ListBox>
                 <materialDesign:PackIcon Kind="MicrosoftWindows"  HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
                 <Label Content="Windows操作系统：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
-                <TextBlock x:Name="操作系统信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="195" Canvas.Top="41" Canvas.Left="10" Width="100"><Run Text="操作系统"/><Run Text="名称"/><Run Text="："/><Run Text="  "/><LineBreak/><Run Text="操作系统"/><Run Text="版本"/><Run Text="："/><Run Text="  "/><LineBreak/><Run Text="操作系统位宽："/><Run Text="  "/><LineBreak/><Run Text="物理内存大小："/><Run Text="  "/><LineBreak/><Run Text="物理内存可用："/><Run Text="  "/><LineBreak/><Run Text="分页文件大小："/><Run Text="  "/><LineBreak/><Run Text="分页文件可用："/><Run Text="  "/><LineBreak/><Run Text="虚拟内存大小："/><Run Text="  "/><LineBreak/><Run Text="虚拟内存可用："/><Run Text="  "/></TextBlock>
+                <TextBlock x:Name="操作系统信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="195" Canvas.Top="41" Canvas.Left="10" Width="100" Text="操作系统名称： &#xA;操作系统版本： &#xA;操作系统位宽： &#xA;注册用户名称： &#xA;物理内存大小： &#xA;分页文件大小： &#xA;虚拟内存大小： &#xA;计算机名称： &#xD;&#xA;系统序列号：  "/>
                 <TextBlock x:Name="操作系统信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="195" Canvas.Top="41" Canvas.Left="110" Width="225"><Run Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/></TextBlock>
+                <ListBox x:Name="复制信息1_Copy" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="305">
+                    <ListBoxItem x:Name="关闭2" ToolTip="关闭程序" Width="40" Height="40" Cursor="Hand" MouseUp="关闭2_MouseUp">
+                        <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                    </ListBoxItem>
+                </ListBox>
             </Canvas>
-            <Canvas x:Name="显卡显示器" Margin="500,270,430,10">
+            <Canvas x:Name="显卡显示器" Margin="500,270,435,10">
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                    Padding="9,32,32,32" Height="346" Width="345" Opacity="{Binding Opacity, ElementName=card}" />
-                <ListBox HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="32" HorizontalContentAlignment="Center" Padding="0,6,0,0" Canvas.Left="303" Canvas.Top="10">
-                    <materialDesign:PackIcon ToolTip="复制信息到剪切板" Kind="ContentCopy" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-6,0,0"/>
-                </ListBox>
+                    Padding="9,32,32,32" Height="351" Width="345" Opacity="{Binding Opacity, ElementName=card}" />
                 <materialDesign:PackIcon Kind="Monitor"  HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
                 <Label Content="显示适配器和监视器：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
-                <TextBlock x:Name="显卡显示器信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="295" Canvas.Top="41" Canvas.Left="10" Width="115"><Run Text="显示适配器型号："/><LineBreak/><Run Text="显示适配器厂商："/><LineBreak/><Run Text="驱动程序版本：    "/><LineBreak/><Run Text="显示适配器ID：    "/><LineBreak/><Run Text="显示适配器显存："/><LineBreak/><Run Text="显示适配器步进："/><LineBreak/><Run Text="监视器型号：     "/><Run Text=" "/><Run Text=" "/><Run Text=" "/><Run Text=" "/><LineBreak/><Run Text="监视器ID：          "/><Run Text=" "/><Run Text=" "/><Run Text=" "/><LineBreak/><Run Text="监视器尺寸：      "/><Run Text=" "/><Run Text=" "/><Run Text=" "/><LineBreak/><Run Text="检测器高宽：       "/><Run Text=" "/><Run Text=" "/><LineBreak/><Run Text="监视器生产日期："/><LineBreak/><Run Text="监视器Edid版本："/><Run Text=" "/><LineBreak/><Run Text="监视器序列号： "/><Run Text=" "/><Run Text=" "/><Run Text="  "/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
-                <TextBlock x:Name="显卡显示器信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="295" Canvas.Top="39.666" Canvas.Left="125" Width="210"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/></TextBlock>
+                <TextBlock x:Name="显卡显示器信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="310" Canvas.Top="41" Canvas.Left="10" Width="115" Text="显示适配器型号： &#xA;显示适配器厂商： &#xA;驱动程序版本： &#xA;显示适配器ID： &#xA;显示适配器显存： &#xA;显示适配器步进： &#xA;监视器型号： &#xA;监视器ID： &#xA;监视器尺寸： &#xA;监视器高宽： &#xA;监视器生产日期： &#xA;监视器Edid版本： &#xA;当前显示模式： &#xD;&#xA;显卡DAC类型： "/>
+                <TextBlock x:Name="显卡显示器信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="311.334" Canvas.Top="39.666" Canvas.Left="125" Width="210"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="带获取..."/></TextBlock>
+                <ListBox x:Name="复制信息1_Copy1" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="305">
+                    <ListBoxItem x:Name="关闭3" ToolTip="关闭程序" Width="40" Height="40" Cursor="Hand" MouseUp="关闭3_MouseUp">
+                        <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                    </ListBoxItem>
+                </ListBox>
             </Canvas>
             <Canvas x:Name="中央处理器" Margin="865,10,10,146">
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
                     Padding="9,32,32,32" Height="466" Width="405" Opacity="{Binding Opacity, ElementName=card}" />
-                <ListBox HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="32" HorizontalContentAlignment="Center" Padding="0,6,0,0" Canvas.Left="363" Canvas.Top="10">
-                    <materialDesign:PackIcon ToolTip="复制信息到剪切板" Kind="ContentCopy" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-6,0,0"/>
-                </ListBox>
                 <materialDesign:PackIcon Kind="Cpu64Bit"  HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
                 <Label Content="中央处理器单元：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
-                <TextBlock x:Name="中央处理器信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="415" Canvas.Top="41" Canvas.Left="10" Width="85"><Run Text="处理器型号："/><LineBreak/><Run Text="处理器架构："/><LineBreak/><Run Text="处理器厂商："/><LineBreak/><Run Text="处理器接口："/><LineBreak/><Run Text="处理器核心："/><LineBreak/><Run Text="处理器线程："/><LineBreak/><Run Text="处理器位宽："/><LineBreak/><Run Text="处理器主频："/><LineBreak/><Run Text="处理器外频："/><LineBreak/><Run Text="处理器倍频："/><LineBreak/><Run Text="处理器数量："/><LineBreak/><Run Text="缓存"/><Run Text="一"/><Run Text="类型："/><LineBreak/><Run Text="缓存"/><Run Text="一"/><Run Text="容量："/><LineBreak/><Run Text="缓存"/><Run Text="二"/><Run Text="类型："/><LineBreak/><Run Text="缓存"/><Run Text="二"/><Run Text="容量："/><LineBreak/><Run Text="缓存"/><Run Text="三"/><Run Text="类型："/><LineBreak/><Run Text="缓存"/><Run Text="三"/><Run Text="容量："/><LineBreak/><Run Text="缓存"/><Run Text="四"/><Run Text="类型："/><LineBreak/><Run Text="缓存"/><Run Text="四"/><Run Text="容量："/><LineBreak/><Run/></TextBlock>
-                <TextBlock x:Name="中央处理器信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="415" Canvas.Top="41" Canvas.Left="95" Width="295"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/></TextBlock>
+                <TextBlock x:Name="中央处理器信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="415" Canvas.Top="41" Canvas.Left="10" Width="100" Text="处理器型号： &#xA;处理器架构： &#xA;处理器厂商： &#xA;处理器接口： &#xA;处理器核心： &#xA;处理器线程： &#xA;处理器位宽： &#xA;处理器主频： &#xA;处理器外频： &#xA;虚拟化支持： &#xA;处理器数量： &#xA;缓存一容量： &#xA;缓存二容量： &#xA;缓存三容量： &#xD;&#xA;处理器电压： &#xD;&#xA;已安装内存： &#xD;&#xA;安装内存数量： &#xA;Hyper-V支持： &#xA;处理器序列号： "/>
+                <TextBlock x:Name="中央处理器信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="415" Canvas.Top="41" Canvas.Left="110" Width="285"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/></TextBlock>
+                <ListBox x:Name="复制信息1_Copy2" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                    <ListBoxItem x:Name="关闭4" ToolTip="关闭程序" Width="40" Height="40" Cursor="Hand" MouseUp="关闭4_MouseUp">
+                        <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                    </ListBoxItem>
+                </ListBox>
             </Canvas>
             <Canvas x:Name="BISO芯片" Margin="865,490,10,10">
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                    Padding="9,32,32,32" Height="126" Width="405" Opacity="{Binding Opacity, ElementName=card}" />
+                    Padding="9,32,32,32" Height="131" Width="405" Opacity="{Binding Opacity, ElementName=card}" />
                 <materialDesign:PackIcon Kind="Chip"  HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
                 <Label Content="系统BIOS芯片：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
-                <ListBox HorizontalAlignment="Center" Height="25" VerticalAlignment="Center" Width="32" HorizontalContentAlignment="Center" Padding="0,6,0,0" Canvas.Left="363" Canvas.Top="11">
-                    <materialDesign:PackIcon ToolTip="复制信息到剪切板" Kind="ContentCopy" HorizontalAlignment="Center" Height="20" VerticalAlignment="Center" Width="20" Foreground="Black" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="0,-6,0,0"/>
+                <TextBlock x:Name="bios信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="85" Canvas.Top="36" Canvas.Left="10" Width="75" Text="BIOS厂商： &#xD;&#xA;BISO说明： &#xD;&#xA;BIOS版本： &#xD;&#xA;OEM版本： "/>
+                <TextBlock x:Name="bios信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="85" Canvas.Top="36" Canvas.Left="85" Width="310"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/></TextBlock>
+                <ListBox x:Name="复制信息1_Copy3" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                    <ListBoxItem x:Name="关闭5" ToolTip="关闭程序" Width="40" Height="40" Cursor="Hand" MouseUp="关闭5_MouseUp">
+                        <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                    </ListBoxItem>
                 </ListBox>
-                <TextBlock x:Name="bios信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="85" Canvas.Top="36" Canvas.Left="10" Width="75"><Run Text="BIOS厂商："/><LineBreak/><Run Text="BISO说明："/><LineBreak/><Run Text="BIOS版本："/><LineBreak/><Run Text="OEM版本："/></TextBlock>
-                <TextBlock x:Name="bios信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="85" Canvas.Top="36" Canvas.Left="85" Width="315"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/></TextBlock>
             </Canvas>
         </Grid>
         <Grid x:Name="界面2" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0">
@@ -2933,7 +3038,7 @@
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
                     Padding="32" Opacity="0.7" Height="210" Width="855" />
-                <Label Content="系统功能：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98.327" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Canvas.Left="11.673" Canvas.Top="11"/>
+                <Label Content="系统功能：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83.327" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Canvas.Left="11.673" Canvas.Top="11"/>
                 <Button Content="碎片整理" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="10" Canvas.Top="40.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_1"/>
                 <Button Content="系统日志" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="10" Canvas.Top="75.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_2"/>
                 <Button Content="注册表编辑器" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="10" Canvas.Top="110.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_3"/>
@@ -2947,7 +3052,7 @@
                 <Button Content="内存诊断" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="317" Canvas.Top="110.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_11"/>
                 <Button Content="计算机管理" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="317" Canvas.Top="145.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_12"/>
                 <Button Content="资源监视器" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="472" Canvas.Top="40.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_13"/>
-                <Button Content="本地安全策略" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="472" Canvas.Top="75.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_14"/>
+                <Button Content="PowerShell" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="472" Canvas.Top="75.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_14"/>
                 <Button Content="防火墙" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="472" Canvas.Top="110.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_15"/>
                 <Button Content="任务计划程序" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Canvas.Left="472" Canvas.Top="145.793" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="Button_Click_16"/>
                 <Image Height="195.103" Width="235" Canvas.Left="615" Canvas.Top="11" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" Source="Resources/图片2.png">
@@ -2960,23 +3065,23 @@
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
                     Padding="32" Opacity="0.7" Height="210" Width="855" />
-                <Label Content="常用功能：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="98.327" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Canvas.Left="11.673" Canvas.Top="11"/>
-                <Button x:Name="button" Content="微步云沙箱" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="45.793" Click="button_Click"/>
-                <Button x:Name="button_Copy" Content="百度识图" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="80.793" Click="button_Copy_Click"/>
-                <Button x:Name="button_Copy1" Content="用户脚本源" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="115.793" Click="button_Copy1_Click"/>
-                <Button x:Name="button_Copy2" Content="宽带速度测试" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="150.793" Click="button_Copy2_Click"/>
-                <Button x:Name="button_Copy3" Content="在线短信验证" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="45.793" Click="button_Copy3_Click"/>
-                <Button x:Name="button_Copy4" Content="微软MSDN" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="80.793" Click="button_Copy4_Click"/>
-                <Button x:Name="button_Copy5" Content="ICO图标转换" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="115.793" Click="button_Copy5_Click"/>
-                <Button x:Name="button_Copy6" Content="学术论文" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="150.793" Click="button_Copy6_Click"/>
-                <Button x:Name="button_Copy7" Content="在线PS" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="45.793" Click="button_Copy7_Click"/>
-                <Button x:Name="button_Copy8" Content="哔哩哔哩" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="80.793" Click="button_Copy8_Click"/>
-                <Button x:Name="button_Copy9" Content="GitHub" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="115.793" Click="button_Copy9_Click"/>
-                <Button x:Name="button_Copy10" Content="GitHub中文社区" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="150.793" Click="button_Copy10_Click"/>
-                <Button x:Name="button_Copy11" Content="文字转语音" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="45.793" Click="button_Copy11_Click"/>
-                <Button x:Name="button_Copy12" Content="在线工具" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="80.793" Click="button_Copy12_Click"/>
-                <Button x:Name="button_Copy13" Content="UHD PIXEI 4K" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="115.793" Click="button_Copy13_Click"/>
-                <Button x:Name="button_Copy14" Content="问答题库" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="150.793" Click="button_Copy14_Click"/>
+                <Label Content="常用功能：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="83.327" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Canvas.Left="11.673" Canvas.Top="11"/>
+                <Button x:Name="button" Content="重新关联图标" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="45.793" Click="button_Click"/>
+                <Button x:Name="button_Copy" Content="清理系统垃圾" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="80.793" Click="button_Copy_Click"/>
+                <Button x:Name="button_Copy1" Content="测试网络延时" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="115.793" Click="button_Copy1_Click"/>
+                <Button x:Name="button_Copy2" Content="检查文件系统" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="11.673" Canvas.Top="150.793" Click="button_Copy2_Click"/>
+                <Button x:Name="button_Copy3" Content="检查系统完整" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="45.793" Click="button_Copy3_Click"/>
+                <Button x:Name="button_Copy4" Content="清理WinSxS" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="80.793" Click="button_Copy4_Click"/>
+                <Button x:Name="button_Copy5" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="115.793" Click="button_Copy5_Click"/>
+                <Button x:Name="button_Copy6" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="165" Canvas.Top="150.793" Click="button_Copy6_Click"/>
+                <Button x:Name="button_Copy7" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="45.793" Click="button_Copy7_Click"/>
+                <Button x:Name="button_Copy8" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="80.793" Click="button_Copy8_Click"/>
+                <Button x:Name="button_Copy9" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="115.793" Click="button_Copy9_Click"/>
+                <Button x:Name="button_Copy10" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="316.673" Canvas.Top="150.793" Click="button_Copy10_Click"/>
+                <Button x:Name="button_Copy11" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="45.793" Click="button_Copy11_Click"/>
+                <Button x:Name="button_Copy12" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="80.793" Click="button_Copy12_Click"/>
+                <Button x:Name="button_Copy13" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="115.793" Click="button_Copy13_Click"/>
+                <Button x:Name="button_Copy14" Content=" " HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="128" BorderBrush="{x:Null}" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="470" Canvas.Top="150.793" Click="button_Copy14_Click"/>
                 <Image Height="194" Width="235" Canvas.Left="615" Canvas.Top="10" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" Source="Resources/图片1.png">
                     <Image.Effect>
                         <DropShadowEffect Opacity="0.5" BlurRadius="2" ShadowDepth="2"/>
@@ -2987,8 +3092,8 @@
                 <materialDesign:Card
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
                     Padding="32" Opacity="0.7" Height="131" Width="855" />
-                <Label Content="常用软件：" Width="115" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="16" FontWeight="Bold" Canvas.Left="10" Canvas.Top="10"/>
-                <Image x:Name="image" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/140.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_MouseUp" Canvas.Top="39.793">
+                <Label Content="常用软件：" Width="85" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="16" FontWeight="Bold" Canvas.Left="10" Canvas.Top="10"/>
+                <Image x:Name="image" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/140.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_MouseUp" Canvas.Top="39.793" Canvas.Left="7">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -2998,7 +3103,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image1" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/133.png" Height="75" Width="60" Canvas.Left="65" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image1_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image1" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/133.png" Height="75" Width="60" Canvas.Left="72" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image1_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3008,7 +3113,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image2" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/139.png" Height="75" Width="60" Canvas.Left="130" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image2_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image2" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/139.png" Height="75" Width="60" Canvas.Left="137" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image2_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3018,7 +3123,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image3" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/136.png" Height="75" Width="60" Canvas.Left="195" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image3_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image3" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/136.png" Height="75" Width="60" Canvas.Left="202" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image3_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3028,7 +3133,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image4" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/134.png" Height="75" Width="60" Canvas.Left="260" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image4_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image4" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/134.png" Height="75" Width="60" Canvas.Left="267" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image4_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3038,7 +3143,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image5" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/107.png" Height="75" Width="60" Canvas.Left="325" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image5_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image5" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/107.png" Height="75" Width="60" Canvas.Left="332" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image5_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3048,7 +3153,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image6" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/101.png" Height="75" Width="60" Canvas.Left="390" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image6_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image6" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/101.png" Height="75" Width="60" Canvas.Left="397" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image6_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3058,7 +3163,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image7" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/102.png" Height="75" Width="60" Canvas.Left="455" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image7_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image7" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/102.png" Height="75" Width="60" Canvas.Left="462" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image7_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3068,7 +3173,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image8" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/104.png" Height="75" Width="60" Canvas.Left="520" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image8_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image8" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/104.png" Height="75" Width="60" Canvas.Left="527" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image8_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3078,7 +3183,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image9" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/103.png" Height="75" Width="60" Canvas.Left="585" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image9_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image9" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/103.png" Height="75" Width="60" Canvas.Left="592" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image9_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3088,7 +3193,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image10" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/169.png" Height="75" Width="60" Canvas.Left="650" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image10_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image10" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/169.png" Height="75" Width="60" Canvas.Left="657" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image10_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3098,7 +3203,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image11" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/109.png" Height="75" Width="60" Canvas.Left="715" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image11_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image11" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/109.png" Height="75" Width="60" Canvas.Left="722" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image11_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3108,7 +3213,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image12" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/165.png" Height="75" Width="60" Canvas.Left="780" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image12_MouseUp" Canvas.Top="39.793">
+                <Image x:Name="image12" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/165.png" Height="75" Width="60" Canvas.Left="787" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image12_MouseUp" Canvas.Top="39.793">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3124,23 +3229,22 @@
                     materialDesign:ShadowAssist.ShadowDepth="Depth2"
                     Padding="32" Opacity="0.7" Height="606" Width="390" />
                 <Canvas x:Name="加密方式" Height="64.6" Canvas.Left="16.59" Canvas.Top="44.4" Width="350.953">
-                    <RadioButton x:Name="算法3" Content="RC4" Canvas.Left="93.41" Canvas.Top="23.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法3_Checked"/>
-                    <RadioButton x:Name="算法4" Content="Base64" Canvas.Left="93.41" Canvas.Top="46.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法4_Checked"/>
-                    <RadioButton x:Name="算法2" Content="DES" Canvas.Top="46.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法2_Checked"/>
+                    <RadioButton x:Name="算法3" Content="RC4" Canvas.Left="54.509" Canvas.Top="23.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法3_Checked"/>
+                    <RadioButton x:Name="算法4" Content="Base64" Canvas.Left="163.469" Canvas.Top="23.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法4_Checked"/>
+                    <RadioButton x:Name="算法2" Content="DES" Canvas.Top="23.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法2_Checked" Canvas.Left="108.87"/>
                     <RadioButton x:Name="算法1" Content="AES" Canvas.Top="23.6" Foreground="Black" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Checked="算法1_Checked"/>
-                    <RadioButton x:Name="算法6" Content="SHA512" Canvas.Left="184.033" Canvas.Top="46.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}"/>
-                    <RadioButton x:Name="算法5" Content="SHA256" Canvas.Left="184.033" Canvas.Top="23.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法5_Checked"/>
+                    <RadioButton x:Name="算法6" Content="SHA512" Canvas.Left="240.866" Canvas.Top="31.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Visibility="Collapsed"/>
+                    <RadioButton x:Name="算法5" Content="SHA256" Canvas.Left="235.866" Canvas.Top="23.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Checked="算法5_Checked"/>
                     <RadioButton x:Name="算法8" Content="" Canvas.Left="283.41" Canvas.Top="46.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Visibility="Collapsed"/>
                     <RadioButton x:Name="算法7" Content="UTF-8" Canvas.Left="283.41" Canvas.Top="23.6" Foreground="Black" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=算法1}" Visibility="Collapsed"/>
-                    <Label Content="加密算法：" Width="98.41"/>
                 </Canvas>
                 <Canvas x:Name="密钥" Height="23.6" Canvas.Left="16.59" Canvas.Top="114" Width="363.41">
                     <Label Content="密钥：" Width="53.41"/>
-                    <TextBox x:Name="密钥1"  BorderBrush="{Binding Fill, ElementName=标题背景}" Height="23" TextWrapping="Wrap" Width="305" Canvas.Left="58.41" Canvas.Top="0.6" CaretBrush="{x:Null}" Foreground="Black" Background="#00A00F0F" MaxLength="0"/>
+                    <TextBox x:Name="密钥1"  BorderBrush="{Binding Fill, ElementName=标题背景}" Height="23" TextWrapping="Wrap" Width="305" Canvas.Left="58.41" Canvas.Top="0.6" CaretBrush="{x:Null}" Foreground="Black" Background="#00000000" MaxLength="0"/>
                 </Canvas>
                 <Canvas x:Name="开始" Height="32.903" Canvas.Left="11.673" Canvas.Top="11" Width="373.327">
-                    <Button Content="加密" Width="70" Canvas.Left="223.327" Canvas.Top="0.903" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" Click="Button_Click_17"/>
-                    <Button Content="解密" Width="70" Canvas.Left="298.327" Canvas.Top="0.903" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" Click="Button_Click_18"/>
+                    <Button Content="加密" Width="95" Canvas.Left="173.327" Canvas.Top="0.903" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" Click="Button_Click_17"/>
+                    <Button Content="解密" Width="95" Canvas.Left="273.327" Canvas.Top="0.903" BorderBrush="{x:Null}" Background="{Binding Background, ElementName=button}" Click="Button_Click_18"/>
                     <Label Content="字符串加密/解密：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="228.327" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16"/>
                 </Canvas>
                 <Canvas x:Name="结果" Height="458.4" Canvas.Left="11.673" Canvas.Top="142.6" Width="363.41">
@@ -3154,7 +3258,10 @@
             </Canvas>
         </Grid>
         <Grid x:Name="界面3" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True">
-            <Canvas x:Name="第一行" Margin="25,10,25,546">
+            <materialDesign:Card
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                Padding="32" Opacity="0.7" Margin="10,10,10,152.5" />
+            <Canvas x:Name="第一行" Margin="25,27,25,539">
                 <Image x:Name="image_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/140.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy_MouseUp">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -3346,7 +3453,7 @@
                     </Image.RenderTransform>
                 </Image>
             </Canvas>
-            <Canvas x:Name="第二行" Margin="25,96,25,460">
+            <Canvas x:Name="第二行" Margin="25,113,25,453">
                 <Image x:Name="image_Copy19" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/109.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy19_MouseUp">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -3538,7 +3645,7 @@
                     </Image.RenderTransform>
                 </Image>
             </Canvas>
-            <Canvas x:Name="第三行" Margin="25,186,25,370">
+            <Canvas x:Name="第三行" Margin="25,203,25,363">
                 <Image x:Name="image_Copy38" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Icon_file/173.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy38_MouseUp">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -3730,7 +3837,7 @@
                     </Image.RenderTransform>
                 </Image>
             </Canvas>
-            <Canvas x:Name="第四行" Margin="25,276,25,280">
+            <Canvas x:Name="第四行" Margin="25,293,25,273">
                 <Image x:Name="image_Copy57" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy57_MouseUp" Source="Icon_file/199.png">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -3922,7 +4029,7 @@
                     </Image.RenderTransform>
                 </Image>
             </Canvas>
-            <Canvas x:Name="第四行_Copy" Margin="25,371,25,185">
+            <Canvas x:Name="第五行" Margin="25,388,25,178">
                 <Image x:Name="image_Copy76" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy76_MouseUp" Source="Icon_file/197.png">
                     <Image.RenderTransform>
                         <TransformGroup>
@@ -3943,7 +4050,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image_Copy78" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="130" MouseUp="image_Copy59_MouseUp">
+                <Image x:Name="image_Copy78" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="130" MouseUp="image_Copy78_MouseUp" Source="Icon_file/200.png">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -3953,7 +4060,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-                <Image x:Name="image_Copy79" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="195" MouseUp="image_Copy60_MouseUp">
+                <Image x:Name="image_Copy79"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="195" MouseUp="image_Copy79_MouseUp" Source="Icon_file/201.png">
                     <Image.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -4115,366 +4222,14 @@
                 </Image>
             </Canvas>
         </Grid>
-        <Grid x:Name="界面4" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True">
-            <Canvas x:Name="选项框" Margin="0,2,0,585">
-                <Rectangle Fill="{Binding Fill, ElementName=标题背景}" RadiusX="7" RadiusY="7" Height="44" Width="1280">
-                    <Rectangle.Effect>
-                        <DropShadowEffect BlurRadius="8" Opacity="0.44" Direction="344" ShadowDepth="1"/>
-                    </Rectangle.Effect>
-                </Rectangle>
-                <materialDesign:ColorZone
-                    Mode="PrimaryMid" HorizontalAlignment="Left" Width="1280" BorderBrush="White" Foreground="White" Background="{x:Null}">
-                    <StackPanel
-                        Orientation="Horizontal"
-                        Margin="2">
-                        <RadioButton x:Name="注册表清理"
-                            Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
-                            IsChecked="True"
-                            Content="注册表清理" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="White" BorderBrush="{Binding BorderBrush, ElementName=大文件扫描}" Click="注册表清理_Click" />
-                        <RadioButton x:Name="常规清理"
-                            Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
-                            IsChecked="False"
-                            Content="常规清理" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" BorderBrush="{Binding BorderBrush, ElementName=大文件扫描}" Click="常规清理_Click" />
-                        <RadioButton x:Name="高级清理"
-                            Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
-                            IsChecked="False"
-                            Content="高级清理" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" BorderBrush="{Binding BorderBrush, ElementName=大文件扫描}" Click="高级清理_Click" Visibility="Collapsed" />
-                        <RadioButton x:Name="系统瘦身"
-                            Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
-                            IsChecked="True"
-                            Content="系统瘦身" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" BorderBrush="{Binding BorderBrush, ElementName=大文件扫描}" Click="系统瘦身_Click" Visibility="Collapsed" />
-                        <RadioButton x:Name="大文件扫描"
-                            Style="{StaticResource MaterialDesignTabRadioButton}"
-                            Margin="4"
-                            Content="大文件扫描" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="White" BorderBrush="White" Click="大文件扫描_Click" />
-                    </StackPanel>
-                </materialDesign:ColorZone>
-            </Canvas>
-            <Grid x:Name="注册表清理框" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="1260" Margin="10,51,0,0" d:IsHidden="True">
-                <Canvas x:Name="提示框" Margin="10,10,10,495">
-                    <materialDesign:Card
-                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                        Padding="32"
-                        Content="DEPTH 2" Background="White" Opacity="0.7" Height="60.4" Width="1240" />
-                    <materialDesign:PackIcon HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Foreground="Black" Canvas.Left="10" Canvas.Top="5"/>
-                    <Label Content="定期清理注册表可以提高系统的稳定性" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="405" FontSize="18" FontWeight="Bold" Canvas.Left="60" Canvas.Top="10"/>
-                    <Button Content="开始扫描" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="40" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Normal" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="1055" Canvas.Top="11.367"/>
-                    <Label Content="上一次清理是在：" Canvas.Left="60" Canvas.Top="36.8" Width="230"/>
-                </Canvas>
-                <ListBox x:Name="注册表选项" HorizontalAlignment="Left" Height="465" VerticalAlignment="Top" Width="1240" Margin="10,95,0,0" VerticalContentAlignment="Center">
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的插件及其组件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表1" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示1" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="已删除文件残留的无效路径及文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表2" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示2" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="已注册程序残留的无效路径及文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="205" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表3" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示3" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的扩展名信息" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表4" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示4" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的帮助文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表5" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示5" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的Windows防火墙设置" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表6" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示6" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的字体信息" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表7" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示7" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="丢失的动态链接库" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表8" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示8" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="用户操作历史记录" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表9" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示9" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的卸载" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表10" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示10" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="过期的启动菜单项" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表11" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示11" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="过期或无效的启动程序" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表12" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示12" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="过期或无效的声音或事件设置" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表13" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示13" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="映像劫持" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表14" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示14" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的应用程序设置 " HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表15" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示15" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="Windows服务" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表16" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示16" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="MUI缓存" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表17" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示17" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="无效的右键菜单项" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表18" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示18" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                </ListBox>
-            </Grid>
-            <Grid x:Name="常规清理框" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="1260" Margin="10,51,0,0" d:IsHidden="True">
-                <Canvas x:Name="提示框_Copy" Margin="10,10,10,495">
-                    <materialDesign:Card
-                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                        Padding="32"
-                        Content="DEPTH 2" Background="White" Opacity="0.7" Height="60.4" Width="1240" />
-                    <materialDesign:PackIcon HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Foreground="Black" Canvas.Left="10" Canvas.Top="5"/>
-                    <Label Content="定期清理系统磁盘垃圾可以减少系统卡顿" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="405" FontSize="18" FontWeight="Bold" Canvas.Left="60" Canvas.Top="10"/>
-                    <Button Content="开始扫描" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="40" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Normal" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="1055" Canvas.Top="11.367"/>
-                    <Label Content="上一次清理是在：" Canvas.Left="60" Canvas.Top="36.8" Width="230"/>
-                </Canvas>
-                <ListBox x:Name="注册表选项_Copy" HorizontalAlignment="Left" Height="465" VerticalAlignment="Top" Width="1240" Margin="10,95,0,0" VerticalContentAlignment="Center">
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="系统日志文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表19" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示19" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="IIS日志文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="225" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表20" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示20" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="缩略图缓存" HorizontalAlignment="Left" VerticalAlignment="Top" Width="205" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表21" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示21" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="远程桌面缓存文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表22" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示22" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="Windows字体缓存" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表23" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示23" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="Windows系统缓存" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表24" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示24" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="Windows安装程序缓存" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表25" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示25" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="Windows WinSxS备份" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表26" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示26" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="Windows系统更新文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表27" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示27" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="Windows系统预读文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表28" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示28" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="回收站文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表29" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示29" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="用户临时文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表30" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示30" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                    <ListBoxItem Style="{DynamicResource SimpleListBoxItem}" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="1" Padding="1">
-                        <Canvas HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="1240" Background="White" Opacity="0.8">
-                            <materialDesign:PackIcon HorizontalAlignment="Left" Height="25" VerticalAlignment="Top" Width="20" Foreground="Black" Canvas.Left="30" Canvas.Top="5"/>
-                            <Label Content="内部转储文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="185" Height="25" VerticalContentAlignment="Center" Canvas.Left="55" Canvas.Top="5"/>
-                            <CheckBox x:Name="注册表31" Content="CheckBox" HorizontalAlignment="Left" Height="23" VerticalAlignment="Top" Width="17.833" HorizontalContentAlignment="Center" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="7.167" Canvas.Top="7"/>
-                            <Label x:Name="注册表提示31" Content="暂未扫描..." Canvas.Left="1130" Canvas.Top="5" Height="25" Width="80" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                        </Canvas>
-                    </ListBoxItem>
-                </ListBox>
-            </Grid>
-            <Grid x:Name="高级清理框" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="1260" Margin="10,51,0,0" d:IsHidden="True">
-                <Canvas x:Name="提示框_Copy1" Margin="10,10,10,495">
-                    <materialDesign:Card
-                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                        Padding="32"
-                        Content="DEPTH 2" Background="White" Opacity="0.7" Height="60.4" Width="1240" />
-                    <materialDesign:PackIcon HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Foreground="Black" Canvas.Left="10" Canvas.Top="5"/>
-                    <Label Content="查找到无效的文件，并释放空间" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="405" FontSize="18" FontWeight="Bold" Canvas.Left="60" Canvas.Top="10"/>
-                    <Button Content="开始扫描" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="40" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Normal" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="1055" Canvas.Top="11.367"/>
-                    <Label Content="上一次清理是在：" Canvas.Left="60" Canvas.Top="36.8" Width="230"/>
-                </Canvas>
-            </Grid>
-            <Grid x:Name="系统瘦身框" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="1260" Margin="10,51,0,0" d:IsHidden="True">
-                <Canvas x:Name="提示框_Copy2" Margin="10,10,10,495">
-                    <materialDesign:Card
-                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                        Padding="32"
-                        Content="DEPTH 2" Background="White" Opacity="0.7" Height="60.4" Width="1240" />
-                    <materialDesign:PackIcon HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Foreground="Black" Canvas.Left="10" Canvas.Top="5"/>
-                    <Label Content="删除系统不需要文件，增加磁盘剩余空间" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="405" FontSize="18" FontWeight="Bold" Canvas.Left="60" Canvas.Top="10"/>
-                    <Button Content="开始扫描" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="40" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Normal" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="1055" Canvas.Top="11.367"/>
-                    <Label Content="上一次清理是在：" Canvas.Left="60" Canvas.Top="36.8" Width="230"/>
-                </Canvas>
-            </Grid>
-            <Grid x:Name="大文件扫描框" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="1260" Margin="10,51,0,0">
-                <Canvas x:Name="提示框_Copy3" Margin="10,10,10,495">
-                    <materialDesign:Card
-                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
-                        Padding="32"
-                        Content="DEPTH 2" Background="White" Opacity="0.7" Height="60.4" Width="1240" />
-                    <materialDesign:PackIcon HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Foreground="Black" Canvas.Left="10" Canvas.Top="5"/>
-                    <Label Content="定期删除占用磁盘空间大的文件，释放磁盘空间" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="405" FontSize="18" FontWeight="Bold" Canvas.Left="60" Canvas.Top="10"/>
-                    <Button Content="开始扫描" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="40" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Normal" Background="{Binding Fill, ElementName=标题背景}" BorderBrush="{x:Null}" Canvas.Left="1055" Canvas.Top="11.367"/>
-                    <Label Content="上一次清理是在：" Canvas.Left="60" Canvas.Top="36.8" Width="230"/>
-                </Canvas>
-                <ListBox HorizontalAlignment="Left" Height="480" Margin="10,80,0,0" VerticalAlignment="Top" Width="1240" Background="#59FFFFFF"/>
-            </Grid>
-        </Grid>
+        <Grid x:Name="界面4" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True"/>
         <Grid x:Name="界面5" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True"/>
         <Grid x:Name="界面6" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True"/>
         <Grid x:Name="界面7" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True"/>
         <Grid x:Name="界面8" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True"/>
         <Grid x:Name="界面9" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True"/>
         <Grid x:Name="界面10" HorizontalAlignment="Left" Height="631" VerticalAlignment="Top" Width="1280" Margin="0,69,0,0" d:IsHidden="True"/>
-        <Rectangle x:Name="黑幕" Fill="#80000000" Stroke="Black" RadiusY="5" StrokeThickness="0" RadiusX="5" ClipToBounds="True" SnapsToDevicePixels="True" MouseUp="黑幕_MouseUp" Visibility="Collapsed"/>
+        <Rectangle x:Name="黑幕" Fill="#80000000" Stroke="Black" RadiusY="5" StrokeThickness="0" RadiusX="5" ClipToBounds="True" SnapsToDevicePixels="True" MouseUp="黑幕_MouseUp" Visibility="Collapsed" d:IsHidden="True"/>
         <Grid x:Name="菜单选项卡" Height="698.5" VerticalAlignment="Bottom" Width="230" Background="White" HorizontalAlignment="Left" Margin="-230.875,0,0,1.5" RenderTransformOrigin="0.5,0.5" SnapsToDevicePixels="True" Clip="M0,5 C0,2.2385763 2.2385763,0 5,0 L225,0 C227.76142,0 230,2.2385763 230,5 L230,693.5 C230,696.26142 227.76142,698.5 225,698.5 L5,698.5 C2.2385763,698.5 0,696.26142 0,693.5 z">
             <Grid.RenderTransform>
                 <TransformGroup>
@@ -4484,6 +4239,7 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Grid.RenderTransform>
+            <Rectangle HorizontalAlignment="Left" Height="698.5" VerticalAlignment="Top" Width="230" RadiusY="4.5" RadiusX="4.5" Fill="#FFF4F4F5" Stroke="{Binding Fill, ElementName=标题背景}"/>
             <ToggleButton x:Name="菜单关闭" ToolTip="菜单"
                 Style="{DynamicResource MaterialDesignHamburgerToggleButton}" Height="Auto" Margin="178,16,15,647" Width="Auto" Background="#00000000" Foreground="Black" Click="菜单关闭_Click" />
             <TextBox x:Name="textBox"
@@ -4493,56 +4249,48 @@
     VerticalScrollBarVisibility="Auto"
     materialDesign:HintAssist.Hint="搜索功能"
     materialDesign:HintAssist.Foreground ="{Binding Fill, ElementName=标题背景}"
-    IsEnabled="True" Margin="10,58,15,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="Black" MaxLines="1" CaretBrush="{Binding Fill, ElementName=标题背景}" SelectionBrush="Black" BorderBrush="{Binding CaretBrush, ElementName=textBox}" FontFamily="{Binding FontFamily, ElementName=label}" >
+    IsEnabled="False" Margin="10,58,15,0" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Foreground="Black" MaxLines="1" CaretBrush="{Binding Fill, ElementName=标题背景}" SelectionBrush="Black" BorderBrush="{Binding CaretBrush, ElementName=textBox}" FontFamily="{Binding FontFamily, ElementName=label}" >
                 <TextBox.Background>
                     <SolidColorBrush Color="Transparent" Opacity="0"/>
                 </TextBox.Background>
             </TextBox>
             <Rectangle x:Name="选项卡背景" HorizontalAlignment="Left" Height="565" Margin="10,125,0,0" RadiusY="5" RadiusX="5" Stroke="{Binding Fill, ElementName=标题背景}" VerticalAlignment="Top" Width="205"/>
             <ListBox x:Name="选项卡" HorizontalAlignment="Left" Height="565" Margin="10,125,0,0" VerticalAlignment="Top" Width="205" BorderBrush="{Binding Fill, ElementName=标题背景}" BorderThickness="0" ClipToBounds="True" SnapsToDevicePixels="True" Clip="M0.5,5.5 C0.5,2.7385763 2.7385763,0.5 5.5,0.5 L199.5,0.5 C202.26142,0.5 204.5,2.7385763 204.5,5.5 L204.5,559.5 C204.5,562.26142 202.26142,564.5 199.5,564.5 L5.5,564.5 C2.7385763,564.5 0.5,562.26142 0.5,559.5 z" SelectionChanged="选项卡_SelectionChanged">
-                <Grid x:Name="基本信息" Height="25" Width="190">
+                <Canvas x:Name="基本信息" Height="25" Width="190">
                     <materialDesign:PackIcon Kind="DesktopTowerMonitor"   HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label x:Name="label" Content="基本信息" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
-                </Grid>
-                <Grid x:Name="常用软件" Height="25" Width="190">
+                    <Label x:Name="label" Content="基本信息" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="60.4"/>
+                </Canvas>
+                <Canvas x:Name="常用软件" Height="25" Width="190">
                     <materialDesign:PackIcon Kind="Android" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="常用功能" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
-                <Grid x:Name="高级软件" Height="25" Width="190">
+                    <Label Content="常用功能" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" Canvas.Left="60.4"/>
+                </Canvas>
+                <Canvas x:Name="高级软件" Height="25" Width="190">
                     <materialDesign:PackIcon  Kind="AndroidDebugBridge" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="高级软件" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                </Grid>
-                <Grid x:Name="系统清理" Height="25" Width="190">
-                    <materialDesign:PackIcon Kind="DeleteClockOutline" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="系统清理" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
-                <Grid x:Name="系统优化" Height="25" Width="190">
-                    <materialDesign:PackIcon Kind="BallotRecountOutline" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="系统优化" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
-                <Grid x:Name="系统监控" Height="25" Width="190">
+                    <Label Content="高级软件" HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Canvas.Left="60.4"/>
+                </Canvas>
+                <Canvas x:Name="系统监控" IsEnabled="False" Height="25" Width="190">
                     <materialDesign:PackIcon Kind="AlignHorizontalLeft" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="系统监控" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
-                <Grid x:Name="其他工具" Height="25" Width="190">
+                    <Label Content="系统监控" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" Canvas.Left="60.4"/>
+                </Canvas>
+                <Canvas x:Name="其他工具" IsEnabled="False" Height="25" Width="190">
                     <materialDesign:PackIcon Kind="FileTableBoxMultipleOutline" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="其他工具" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
-                <Grid x:Name="软件设置" Height="25" Width="190">
+                    <Label Content="其他工具" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" Canvas.Left="60.4"/>
+                </Canvas>
+                <Canvas x:Name="软件设置" IsEnabled="False" Height="25" Width="190">
                     <materialDesign:PackIcon Kind="ApplicationCog" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="软件设置" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
-                <Grid x:Name="关于程序" Height="25" Width="190">
+                    <Label Content="软件设置" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" Canvas.Left="60.4"/>
+                </Canvas>
+                <Canvas x:Name="关于程序" IsEnabled="False" Height="25" Width="190">
                     <materialDesign:PackIcon Kind="InformationVariant" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="关于程序" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
-                <Grid x:Name="需要帮助" Height="25" Width="190">
+                    <Label Content="关于程序" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" Canvas.Left="60.4"/>
+                </Canvas>
+                <Canvas x:Name="需要帮助" IsEnabled="False" Height="25" Width="190">
                     <materialDesign:PackIcon Kind="ChatQuestionOutline" HorizontalAlignment="Left" VerticalAlignment="Center" Height="25" Width="22"/>
-                    <Label Content="需要帮助" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}"/>
-                </Grid>
+                    <Label Content="需要帮助" HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="15" FontFamily="{Binding FontFamily, ElementName=label}" Canvas.Left="60.4"/>
+                </Canvas>
             </ListBox>
             <Label Content="菜单" HorizontalAlignment="Left" Height="38" Margin="60,12,0,0" VerticalAlignment="Top" Width="65" FontSize="30" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#FZJingHeiS-R-GB"/>
-            <materialDesign:PackIcon Kind="CalendarTextOutline" HorizontalAlignment="Left" Height="43" Margin="15,10,0,0" VerticalAlignment="Top" Width="40" Foreground="Black"/>
+            <materialDesign:PackIcon Kind="CalendarTextOutline" HorizontalAlignment="Left" Height="43" Margin="15,10,0,0" VerticalAlignment="Top" Width="40" Foreground="{Binding Fill, ElementName=标题背景}"/>
             <Canvas x:Name="小动画" Margin="55.875,411.4,69.125,10">
                 <Image x:Name="菜单背景" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" Height="143.5" VerticalAlignment="Top" Width="105" Source="Resources/小人.png" RenderTransformOrigin="0.5,0.5" Canvas.Top="133" MouseUp="菜单背景_MouseUp">
                     <Image.RenderTransform>
@@ -4578,6 +4326,22 @@
                     </Label.RenderTransform>
                 </Label>
             </Canvas>
+        </Grid>
+        <Grid x:Name="小提示" Height="80" Margin="535,590,535,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+            <Rectangle x:Name="小提示背景" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="45" VerticalAlignment="Top" Width="170" Stroke="{Binding Fill, ElementName=标题背景}" RadiusX="5" RadiusY="5" Margin="20,20,0,0">
+                <Rectangle.Effect>
+                    <DropShadowEffect Opacity="0.4" ShadowDepth="2" Direction="300"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Label x:Name="小提示信息" Content="提示信息" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" Width="160" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="13" FontWeight="Bold" FontFamily="微软雅黑"/>
         </Grid>
     </Grid>
 </Window>
