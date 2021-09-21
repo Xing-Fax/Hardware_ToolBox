@@ -1,0 +1,1840 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hardware_ToolBox.Control_class"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Name="userControl" x:Class="Hardware_ToolBox.Control_class.Software"
+             mc:Ignorable="d" Height="468.5" Width="1260">
+    <UserControl.Resources>
+        <Storyboard x:Key="放大1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标3">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大4">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标4">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标5">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大6">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标6">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大7">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标7">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标7">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大8">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标8">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大9">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标9">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标9">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大10"/>
+        <Storyboard x:Key="放大11">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标11">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标11">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大12">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标12">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标12">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大13">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标13">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标13">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大14">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标14">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标14">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大15">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标15">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标15">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大16">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标16">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标16">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大17">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标17">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标17">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大18">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标18">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标18">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大19">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标19">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标19">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大20">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标20">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标20">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大21">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标21">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标21">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大22">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标22">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标22">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大23">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标23">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标23">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大24">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标24">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标24">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大25">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标25">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标25">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大26">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标26">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标26">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大27">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标27">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标27">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大28">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标28">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标28">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大29">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标29">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标29">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大30">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标30">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标30">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大31"/>
+        <Storyboard x:Key="放大32">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标32">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标32">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大33"/>
+        <Storyboard x:Key="放大34">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标34">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标34">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大35">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标35">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标35">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大36">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标36">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标36">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大37"/>
+        <Storyboard x:Key="放大38">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标38">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标38">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大39"/>
+        <Storyboard x:Key="放大40">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标40">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标40">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大41">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标41">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标41">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大42">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标42">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标42">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大43">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标43">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标43">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大44">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标44">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标44">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大45">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标45">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标45">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大46">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标46">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标46">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大47">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标47">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标47">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大48">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标48">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标48">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大49">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标49">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标49">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大50">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标50">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标50">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大51">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标51">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标51">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大52">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标52">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标52">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大53">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标53">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标53">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大54">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标54">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标54">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="放大55">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标55">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标55">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1.118"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标1">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标2">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小3">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标3">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标3">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小4">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标4">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标4">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小5">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标5">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标5">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小6">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标6">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标6">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小7">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标7">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标7">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小8">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标8">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标8">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小9">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标9">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标9">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小10"/>
+        <Storyboard x:Key="缩小11">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标11">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标11">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小12">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标12">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标12">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小13">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标13">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标13">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小14">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标14">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标14">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小15">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标15">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标15">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小16">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标16">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标16">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小17">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标17">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标17">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小18">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标18">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标18">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小19">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标19">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标19">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小20">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标20">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标20">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小21">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标21">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标21">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小22">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标22">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标22">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小23">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标23">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标23">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小24">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标24">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标24">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小25">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标25">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标25">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小26">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标26">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标26">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小27">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标27">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标27">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小28">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标28">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标28">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小29">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标29">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标29">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小30">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标30">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标30">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小31"/>
+        <Storyboard x:Key="缩小32">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标32">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标32">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小33"/>
+        <Storyboard x:Key="缩小34">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标34">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标34">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小35">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标35">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标35">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小36">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标36">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标36">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小37"/>
+        <Storyboard x:Key="缩小38">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标38">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标38">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小39"/>
+        <Storyboard x:Key="缩小40">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标40">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标40">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小41">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标41">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标41">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小42">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标42">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标42">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小43">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标43">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标43">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小44">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标44">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标44">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小45">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标45">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标45">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小46">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标46">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标46">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小47">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标47">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标47">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小48">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标48">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标48">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小49">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标49">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标49">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小50">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标50">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标50">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小51">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标51">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标51">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小52">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标52">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标52">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小53">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标53">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标53">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小54">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标54">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标54">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="缩小55">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="图标55">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="图标55">
+                <SplineDoubleKeyFrame KeyTime="0" Value="1.118"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标1">
+            <BeginStoryboard x:Name="放大1_BeginStoryboard" Storyboard="{StaticResource 放大1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标2">
+            <BeginStoryboard x:Name="放大2_BeginStoryboard" Storyboard="{StaticResource 放大2}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标3">
+            <BeginStoryboard x:Name="放大3_BeginStoryboard" Storyboard="{StaticResource 放大3}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标4">
+            <BeginStoryboard x:Name="放大4_BeginStoryboard" Storyboard="{StaticResource 放大4}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标5">
+            <BeginStoryboard x:Name="放大5_BeginStoryboard" Storyboard="{StaticResource 放大5}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标6">
+            <BeginStoryboard x:Name="放大6_BeginStoryboard" Storyboard="{StaticResource 放大6}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标7">
+            <BeginStoryboard x:Name="放大7_BeginStoryboard" Storyboard="{StaticResource 放大7}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标8">
+            <BeginStoryboard x:Name="放大8_BeginStoryboard" Storyboard="{StaticResource 放大8}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标9">
+            <BeginStoryboard x:Name="放大9_BeginStoryboard" Storyboard="{StaticResource 放大9}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标11">
+            <BeginStoryboard x:Name="放大11_BeginStoryboard" Storyboard="{StaticResource 放大11}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标12">
+            <BeginStoryboard x:Name="放大12_BeginStoryboard" Storyboard="{StaticResource 放大12}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标13">
+            <BeginStoryboard x:Name="放大13_BeginStoryboard" Storyboard="{StaticResource 放大13}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标14">
+            <BeginStoryboard x:Name="放大14_BeginStoryboard" Storyboard="{StaticResource 放大14}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标15">
+            <BeginStoryboard x:Name="放大15_BeginStoryboard" Storyboard="{StaticResource 放大15}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标16">
+            <BeginStoryboard x:Name="放大16_BeginStoryboard" Storyboard="{StaticResource 放大16}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标17">
+            <BeginStoryboard x:Name="放大17_BeginStoryboard" Storyboard="{StaticResource 放大17}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标18">
+            <BeginStoryboard x:Name="放大18_BeginStoryboard" Storyboard="{StaticResource 放大18}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标19">
+            <BeginStoryboard x:Name="放大19_BeginStoryboard" Storyboard="{StaticResource 放大19}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标20">
+            <BeginStoryboard x:Name="放大20_BeginStoryboard" Storyboard="{StaticResource 放大20}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标21">
+            <BeginStoryboard x:Name="放大21_BeginStoryboard" Storyboard="{StaticResource 放大21}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标22">
+            <BeginStoryboard x:Name="放大22_BeginStoryboard" Storyboard="{StaticResource 放大22}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标23">
+            <BeginStoryboard x:Name="放大23_BeginStoryboard" Storyboard="{StaticResource 放大23}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标24">
+            <BeginStoryboard x:Name="放大24_BeginStoryboard" Storyboard="{StaticResource 放大24}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标25">
+            <BeginStoryboard x:Name="放大25_BeginStoryboard" Storyboard="{StaticResource 放大25}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标26">
+            <BeginStoryboard x:Name="放大26_BeginStoryboard" Storyboard="{StaticResource 放大26}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标27">
+            <BeginStoryboard x:Name="放大27_BeginStoryboard" Storyboard="{StaticResource 放大27}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标28">
+            <BeginStoryboard x:Name="放大28_BeginStoryboard" Storyboard="{StaticResource 放大28}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标29">
+            <BeginStoryboard x:Name="放大29_BeginStoryboard" Storyboard="{StaticResource 放大29}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标30">
+            <BeginStoryboard x:Name="放大30_BeginStoryboard" Storyboard="{StaticResource 放大30}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标32">
+            <BeginStoryboard x:Name="放大32_BeginStoryboard" Storyboard="{StaticResource 放大32}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标34">
+            <BeginStoryboard x:Name="放大34_BeginStoryboard" Storyboard="{StaticResource 放大34}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标35">
+            <BeginStoryboard x:Name="放大35_BeginStoryboard" Storyboard="{StaticResource 放大35}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标36">
+            <BeginStoryboard x:Name="放大36_BeginStoryboard" Storyboard="{StaticResource 放大36}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标38">
+            <BeginStoryboard x:Name="放大38_BeginStoryboard" Storyboard="{StaticResource 放大38}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标40">
+            <BeginStoryboard x:Name="放大40_BeginStoryboard" Storyboard="{StaticResource 放大40}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标41">
+            <BeginStoryboard x:Name="放大41_BeginStoryboard" Storyboard="{StaticResource 放大41}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标42">
+            <BeginStoryboard x:Name="放大42_BeginStoryboard" Storyboard="{StaticResource 放大42}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标43">
+            <BeginStoryboard x:Name="放大43_BeginStoryboard" Storyboard="{StaticResource 放大43}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标44">
+            <BeginStoryboard x:Name="放大44_BeginStoryboard" Storyboard="{StaticResource 放大44}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标45">
+            <BeginStoryboard x:Name="放大45_BeginStoryboard" Storyboard="{StaticResource 放大45}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标46">
+            <BeginStoryboard x:Name="放大46_BeginStoryboard" Storyboard="{StaticResource 放大46}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标47">
+            <BeginStoryboard x:Name="放大47_BeginStoryboard" Storyboard="{StaticResource 放大47}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标48">
+            <BeginStoryboard x:Name="放大48_BeginStoryboard" Storyboard="{StaticResource 放大48}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标49">
+            <BeginStoryboard x:Name="放大49_BeginStoryboard" Storyboard="{StaticResource 放大49}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标50">
+            <BeginStoryboard x:Name="放大50_BeginStoryboard" Storyboard="{StaticResource 放大50}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标51">
+            <BeginStoryboard x:Name="放大51_BeginStoryboard" Storyboard="{StaticResource 放大51}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标52">
+            <BeginStoryboard x:Name="放大52_BeginStoryboard" Storyboard="{StaticResource 放大52}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标53">
+            <BeginStoryboard x:Name="放大53_BeginStoryboard" Storyboard="{StaticResource 放大53}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标54">
+            <BeginStoryboard x:Name="放大54_BeginStoryboard" Storyboard="{StaticResource 放大54}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="图标55">
+            <BeginStoryboard x:Name="放大55_BeginStoryboard" Storyboard="{StaticResource 放大55}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标1">
+            <BeginStoryboard x:Name="缩小1_BeginStoryboard" Storyboard="{StaticResource 缩小1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标2">
+            <BeginStoryboard x:Name="缩小2_BeginStoryboard" Storyboard="{StaticResource 缩小2}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标3">
+            <BeginStoryboard x:Name="缩小3_BeginStoryboard" Storyboard="{StaticResource 缩小3}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标4">
+            <BeginStoryboard x:Name="缩小4_BeginStoryboard" Storyboard="{StaticResource 缩小4}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标5">
+            <BeginStoryboard x:Name="缩小5_BeginStoryboard" Storyboard="{StaticResource 缩小5}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标6">
+            <BeginStoryboard x:Name="缩小6_BeginStoryboard" Storyboard="{StaticResource 缩小6}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标7">
+            <BeginStoryboard x:Name="缩小7_BeginStoryboard" Storyboard="{StaticResource 缩小7}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标8">
+            <BeginStoryboard x:Name="缩小8_BeginStoryboard" Storyboard="{StaticResource 缩小8}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标9">
+            <BeginStoryboard x:Name="缩小9_BeginStoryboard" Storyboard="{StaticResource 缩小9}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标11">
+            <BeginStoryboard x:Name="缩小11_BeginStoryboard" Storyboard="{StaticResource 缩小11}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标12">
+            <BeginStoryboard x:Name="缩小12_BeginStoryboard" Storyboard="{StaticResource 缩小12}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标13">
+            <BeginStoryboard x:Name="缩小13_BeginStoryboard" Storyboard="{StaticResource 缩小13}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标14">
+            <BeginStoryboard x:Name="缩小14_BeginStoryboard" Storyboard="{StaticResource 缩小14}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标15">
+            <BeginStoryboard x:Name="缩小15_BeginStoryboard" Storyboard="{StaticResource 缩小15}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标16">
+            <BeginStoryboard x:Name="缩小16_BeginStoryboard" Storyboard="{StaticResource 缩小16}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标17">
+            <BeginStoryboard x:Name="缩小17_BeginStoryboard" Storyboard="{StaticResource 缩小17}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标18">
+            <BeginStoryboard x:Name="缩小18_BeginStoryboard" Storyboard="{StaticResource 缩小18}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标19">
+            <BeginStoryboard x:Name="缩小19_BeginStoryboard" Storyboard="{StaticResource 缩小19}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标20">
+            <BeginStoryboard x:Name="缩小20_BeginStoryboard" Storyboard="{StaticResource 缩小20}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标21">
+            <BeginStoryboard x:Name="缩小21_BeginStoryboard" Storyboard="{StaticResource 缩小21}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标22">
+            <BeginStoryboard x:Name="缩小22_BeginStoryboard" Storyboard="{StaticResource 缩小22}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标23">
+            <BeginStoryboard x:Name="缩小23_BeginStoryboard" Storyboard="{StaticResource 缩小23}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标24">
+            <BeginStoryboard x:Name="缩小24_BeginStoryboard" Storyboard="{StaticResource 缩小24}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标25">
+            <BeginStoryboard x:Name="缩小25_BeginStoryboard" Storyboard="{StaticResource 缩小25}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标26">
+            <BeginStoryboard x:Name="缩小26_BeginStoryboard" Storyboard="{StaticResource 缩小26}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标27">
+            <BeginStoryboard x:Name="缩小27_BeginStoryboard" Storyboard="{StaticResource 缩小27}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标28">
+            <BeginStoryboard x:Name="缩小28_BeginStoryboard" Storyboard="{StaticResource 缩小28}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标29">
+            <BeginStoryboard x:Name="缩小29_BeginStoryboard" Storyboard="{StaticResource 缩小29}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标30">
+            <BeginStoryboard x:Name="缩小30_BeginStoryboard" Storyboard="{StaticResource 缩小30}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标32">
+            <BeginStoryboard x:Name="缩小32_BeginStoryboard" Storyboard="{StaticResource 缩小32}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标34">
+            <BeginStoryboard x:Name="缩小34_BeginStoryboard" Storyboard="{StaticResource 缩小34}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标35">
+            <BeginStoryboard x:Name="缩小35_BeginStoryboard" Storyboard="{StaticResource 缩小35}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标36">
+            <BeginStoryboard x:Name="缩小36_BeginStoryboard" Storyboard="{StaticResource 缩小36}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标38">
+            <BeginStoryboard x:Name="缩小38_BeginStoryboard" Storyboard="{StaticResource 缩小38}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标40">
+            <BeginStoryboard x:Name="缩小40_BeginStoryboard" Storyboard="{StaticResource 缩小40}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标41">
+            <BeginStoryboard x:Name="缩小41_BeginStoryboard" Storyboard="{StaticResource 缩小41}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标42">
+            <BeginStoryboard x:Name="缩小42_BeginStoryboard" Storyboard="{StaticResource 缩小42}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标43">
+            <BeginStoryboard x:Name="缩小43_BeginStoryboard" Storyboard="{StaticResource 缩小43}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标44">
+            <BeginStoryboard x:Name="缩小44_BeginStoryboard" Storyboard="{StaticResource 缩小44}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标45">
+            <BeginStoryboard x:Name="缩小45_BeginStoryboard" Storyboard="{StaticResource 缩小45}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标46">
+            <BeginStoryboard x:Name="缩小46_BeginStoryboard" Storyboard="{StaticResource 缩小46}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标47">
+            <BeginStoryboard x:Name="缩小47_BeginStoryboard" Storyboard="{StaticResource 缩小47}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标48">
+            <BeginStoryboard x:Name="缩小48_BeginStoryboard" Storyboard="{StaticResource 缩小48}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标49">
+            <BeginStoryboard x:Name="缩小49_BeginStoryboard" Storyboard="{StaticResource 缩小49}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标50">
+            <BeginStoryboard x:Name="缩小50_BeginStoryboard" Storyboard="{StaticResource 缩小50}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标51">
+            <BeginStoryboard x:Name="缩小51_BeginStoryboard" Storyboard="{StaticResource 缩小51}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标52">
+            <BeginStoryboard x:Name="缩小52_BeginStoryboard" Storyboard="{StaticResource 缩小52}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标53">
+            <BeginStoryboard x:Name="缩小53_BeginStoryboard" Storyboard="{StaticResource 缩小53}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标54">
+            <BeginStoryboard x:Name="缩小54_BeginStoryboard" Storyboard="{StaticResource 缩小54}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="图标55">
+            <BeginStoryboard x:Name="缩小55_BeginStoryboard" Storyboard="{StaticResource 缩小55}"/>
+        </EventTrigger>
+
+
+    </UserControl.Triggers>
+    <Grid Width="1260" Height="468.5">
+        <materialDesign:Card x:Name="背景"
+                materialDesign:ShadowAssist.ShadowDepth="Depth2" x:FieldModifier="public"
+                Padding="32" Opacity="{Binding Opacity, ElementName=主要的}" Margin="0,0,0,183.5" />
+        <Canvas x:Name="第一行" Margin="15,17,15,376.5" Height="75">
+            <Image x:Name="图标1"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/140.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy_MouseUp" ToolTip="当前最流行的CPU检测工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标2"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/133.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="65" MouseUp="image_Copy1_MouseUp" ToolTip="一款相对比较硬核的显卡参数检测工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标3"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/139.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="130" MouseUp="image_Copy2_MouseUp" ToolTip="一款固态硬盘参数检测软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标4"   UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/136.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="195" MouseUp="image_Copy3_MouseUp" ToolTip="一款硬盘信息检测软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标5"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/101.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="260" MouseUp="image_Copy4_MouseUp" ToolTip="一款查看硬盘健康信息的软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标6"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/102.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="325" MouseUp="image_Copy5_MouseUp" ToolTip="固态硬盘跑分软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标7"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/134.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="390" MouseUp="image_Copy6_MouseUp" ToolTip="显示器测试工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标8"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/103.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="455" MouseUp="image_Copy7_MouseUp" ToolTip="检测监视器色域软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标9"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/106.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="520" MouseUp="image_Copy8_MouseUp" ToolTip="USB设备型号检测工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标11"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/121.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="650" MouseUp="image_Copy10_MouseUp" ToolTip="一款电压检测软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标12" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/128.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="715" MouseUp="image_Copy11_MouseUp" ToolTip="一款基于Intel Linpack数学核心库的稳定性测试软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标13" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/167.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="780" MouseUp="image_Copy12_MouseUp" ToolTip="将不活动的内存压缩起来节约系统内存">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标14" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/107.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="845" MouseUp="image_Copy13_MouseUp" ToolTip="电池宿命与参数检测软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标15" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/126.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="910" MouseUp="image_Copy14_MouseUp" ToolTip="一款内存稳定性测试软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标16"  UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/108.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="975" MouseUp="image_Copy15_MouseUp" ToolTip="甜甜圈烤鸡软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标17" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/127.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="1040" MouseUp="image_Copy16_MouseUp" ToolTip="一款CUP温度检测软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标19" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/105.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="1170" MouseUp="image_Copy18_MouseUp" ToolTip="测试键盘按键是否全通">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标18" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/155.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="1105" MouseUp="image_Copy47_MouseUp" ToolTip="测试CPU科学计算能力">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标48" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="585" MouseUp="image_Copy77_MouseUp" Source="/Hardware ToolBox;component/Icon_file/198.png" ToolTip="一款U盘扩容检测工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
+        <Canvas x:Name="第二行" Margin="15,103,15,290.5" Height="75">
+            <Image x:Name="图标20" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/109.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy19_MouseUp" ToolTip="一款全面硬件信息检测工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标21" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/100.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="65" MouseUp="image_Copy20_MouseUp" ToolTip="一款硬盘分区管理工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标22" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/125.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="130" MouseUp="image_Copy21_MouseUp" ToolTip="内存稳定性测试工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标23" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/123.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="195" MouseUp="image_Copy22_MouseUp" ToolTip="比较严格的CPU稳定性测试工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标24" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/124.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="260" MouseUp="image_Copy23_MouseUp" ToolTip="同过计算圆周率来测试CPU稳定性能">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标25" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/129.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="325" MouseUp="image_Copy24_MouseUp" ToolTip="光盘映像制作、编辑、转换工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标26" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/130.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="390" MouseUp="image_Copy25_MouseUp" ToolTip="功能强大的显卡超频工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标27" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/131.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="455" MouseUp="image_Copy26_MouseUp" ToolTip="AMD显卡超频工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标28" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/132.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="520" MouseUp="image_Copy27_MouseUp" ToolTip="GPU信息检测工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标29" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/141.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="585" MouseUp="image_Copy28_MouseUp" ToolTip="一款电脑硬件信息检测软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标30" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/142.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="650" MouseUp="image_Copy29_MouseUp" ToolTip="一款专业系统信息检测工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标32" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/144.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="780" MouseUp="image_Copy31_MouseUp" ToolTip="硬盘低级格式化工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标34" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/150.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="910" MouseUp="image_Copy33_MouseUp" ToolTip="显卡驱动卸载工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标35" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/152.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="975" MouseUp="image_Copy34_MouseUp" ToolTip="将内存转换为虚拟磁盘使用">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标36" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/169.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="1040" MouseUp="image_Copy35_MouseUp" ToolTip="一款软件卸载工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标38" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/153.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="1105" MouseUp="image_Copy45_MouseUp" ToolTip="一款内存SPD修改查看工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标52" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="715" Source="/Hardware ToolBox;component/Icon_file/183.png" MouseUp="image_Copy63_MouseUp" ToolTip="一款测试CPU运行能力的软件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标53" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="845" Source="/Hardware ToolBox;component/Icon_file/187.png" MouseUp="image_Copy67_MouseUp" ToolTip="一款磁盘空间分析工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标42" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/147.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="1170" MouseUp="image_Copy42_MouseUp" ToolTip="一款磁盘读写速率测试工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
+        <Canvas x:Name="第三行" Margin="15,193,15,200.5" Height="75">
+            <Image x:Name="图标40" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/145.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="65" MouseUp="image_Copy40_MouseUp" ToolTip="磁盘数据恢复向导">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标41" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/146.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="130" MouseUp="image_Copy41_MouseUp" ToolTip="磁盘碎片整理工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标43" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/148.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="260" MouseUp="image_Copy43_MouseUp" ToolTip="NVIDIA显卡超频工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标44" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Hardware ToolBox;component/Icon_file/149.png" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="325" MouseUp="image_Copy44_MouseUp" ToolTip="显卡稳定性能测试工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标45" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="195" Source="/Hardware ToolBox;component/Icon_file/174.png" MouseUp="image_Copy56_MouseUp" ToolTip="ASCII码查询工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标46" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy78_MouseUp" Source="/Hardware ToolBox;component/Icon_file/200.png" Canvas.Left="455" ToolTip="将一般图片格式转换为ICO图片格式">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标47" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality"  HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="520" MouseUp="image_Copy79_MouseUp" Source="/Hardware ToolBox;component/Icon_file/201.png" ToolTip="通过指定算法对文件进行信息摘要生成进文件">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标50" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="390" Source="/Hardware ToolBox;component/Icon_file/180.png" MouseUp="image_Copy60_MouseUp" ToolTip="对多文件程序进行合并">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标51" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="715" Source="/Hardware ToolBox;component/Icon_file/182.png" MouseUp="image_Copy62_MouseUp" ToolTip="MD5校验工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标54" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="585" Source="/Hardware ToolBox;component/Icon_file/185.png" MouseUp="image_Copy65_MouseUp" ToolTip="对系统软件操作进行监视">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标49" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" MouseUp="image_Copy76_MouseUp" Source="/Hardware ToolBox;component/Icon_file/197.png" Canvas.Left="650" ToolTip="对数字进行进制转换工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="图标55" UseLayoutRounding="True" RenderOptions.BitmapScalingMode="HighQuality" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Width="60" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Source="/Hardware ToolBox;component/Icon_file/188.png" MouseUp="image_Copy68_MouseUp" ToolTip="防卸载隐藏工具">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
+
+    </Grid>
+</UserControl>

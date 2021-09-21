@@ -1,0 +1,46 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hardware_ToolBox.Control_class"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Hardware_ToolBox.Control_class.Help_interface"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="1260" Height="611">
+    <Grid>
+        <Canvas Margin="0,0,1005,0">
+
+            <materialDesign:Card x:Name="背景"
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                Padding="32" Opacity="0.7" Height="611" Width="255" />
+            <ListBox x:Name="菜单" HorizontalAlignment="Left" Height="556" VerticalAlignment="Top" Width="255" Background="{x:Null}" Canvas.Top="56" Foreground="Black" BorderBrush="Black" SelectedIndex="0">
+                <ListBoxItem Content="软件基本介绍" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="基本信息界面" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="其他信息界面" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="高级软件界面" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="系统监控界面" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="其他工具界面" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="程序设置界面" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="常见问题&amp;修复方法" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+                <ListBoxItem Content="开源程序&amp;许可证说明" HorizontalContentAlignment="Center" FontFamily="微软雅黑" FontWeight="Bold"/>
+            </ListBox>
+            <Path Data="M-32,23 L223,23" Fill="#FFF4F4F5" Height="1" Stretch="Fill" Stroke="#4C000000" VerticalAlignment="Top" Canvas.Top="55" Width="255"/>
+            <Label Content="帮助菜单" HorizontalAlignment="Left" VerticalAlignment="Top" Width="230" Height="55" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="20" Canvas.Left="25"/>
+            <materialDesign:PackIcon Kind="AccountQuestionOutline" HorizontalAlignment="Left" VerticalAlignment="Top" Height="30" Width="30" Canvas.Left="64.25" Canvas.Top="11.5" Foreground="Black"/>
+        </Canvas>
+        <Canvas Margin="260,0,0,0">
+            <materialDesign:Card
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                Padding="32" Opacity="0.7" Height="611" Width="1000" />
+            <Grid x:Name="内容" HorizontalAlignment="Left" Height="611" VerticalAlignment="Top" Width="1000">
+                <Label x:Name="标题" Content="软件基本介绍" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0" Foreground="Black" Height="51.694" Width="980" FontSize="26" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold"/>
+                <TextBlock x:Name="帮助0" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,80,0,0" Height="521" Width="980" FontFamily="微软雅黑" FontSize="18" Foreground="Black" LineHeight="16" d:IsHidden="True"><Run FontWeight="Bold" Text="软件介绍："/><LineBreak/><Run FontSize="14" Text="       "/><Run FontSize="14" Text="●"/><Run FontSize="14" Text=" "/><Run FontSize="14" Text="程序使用C#语言开发"/><Run FontSize="14" Text="(部分模块采用C++)"/><Run FontSize="14" Text="，使用WPF界面框架，基于.NET Framework 4.7.2来去开发"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="       "/><Run FontSize="14" Text="●"/><Run FontSize="14" Text=" "/><Run FontSize="14" Text="程序布局采用了卡片式布局的方式来去设计界面，采用视觉上不显眼的分隔线，有助于用户快速浏览"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontWeight="Bold" Text="它可以做什么？"/><LineBreak/><Run FontSize="14" Text="        "/><Run FontSize="14" Text="● "/><Run FontSize="14" Text="它可以对电脑配置信息进行基本的检测，检测基本运行状态"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ● "/><Run FontSize="14" Text="它还可以对电脑配置信息进行全面的检测，并支持导出配置文件"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ● 它提供了一些知名软件(CUP-Z，GPU-Z...)的快捷打开方式"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ● "/><Run FontSize="14" Text="它可以对电脑传感器数据进行捕获，并显示在屏幕中。更加直观的看到运行状态"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ● "/><Run FontSize="14" Text="它提供了其他系统工具，如&quot;文件占用解锁&quot;，以及&quot;编码转换&quot;等等...功能"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontWeight="Bold" Text="我该如何得到它？"/><LineBreak/><Run Text=" "/><Run FontSize="14" Text="       ●通过克隆GitHub上的项目文件到本地，使用 Visual Studio 进行编译"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ●通过下载GitHub上发布版本页面上的文件到本地，解压后进行安装或编译"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ●通过第三方下载平台进行下载编译好的安装文件(百度云、蓝奏云、阿里云)"/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/></TextBlock>
+                <TextBlock x:Name="帮助1" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,80,0,0" Height="521" Width="980" FontFamily="微软雅黑" FontSize="18" Foreground="Black" LineHeight="16" d:IsHidden="True"><Run FontWeight="Bold" Text="功能"/><Run FontWeight="Bold" Text="介绍："/><LineBreak/><Run FontSize="14" Text="       "/><Run FontSize="14" Text="●"/><Run FontSize="14" Text=" "/><Run FontSize="14" Text="此页面为软件默认起始界面，提供了硬件配置信息基本摘要，和简要的运行状态"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="       "/><Run FontSize="14" Text="●"/><Run FontSize="14" Text=" "/><Run FontSize="14" Text="配置信息采用系统WMI进行读取，可能与实际硬件不同"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontWeight="Bold" Text="它可以做什么？"/><LineBreak/><Run FontSize="14" Text="        "/><Run FontSize="14" Text="● "/><Run FontSize="14" Text="它显示了您计算机上配件的参数信息，如数量、配置、容量等等信息"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ● "/><Run FontSize="14" Text="它还对系统CPU、RAM、GPU进行检测，提供了基本的状态信息"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ● "/><Run FontSize="14" Text="您可以对其中的一些进行复制，会自动将信息复制到您的剪切板内"/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/></TextBlock>
+                <TextBlock x:Name="帮助2" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,80,0,0" Height="521" Width="980" FontFamily="微软雅黑" FontSize="18" Foreground="Black" LineHeight="16" d:IsHidden="True"><Run FontWeight="Bold" Text="功能"/><Run FontWeight="Bold" Text="介绍："/><LineBreak/><Run FontSize="14" Text="       "/><Run FontSize="14" Text="●"/><Run FontSize="14" Text=" "/><Run FontSize="14" Text="此页面"/><Run FontSize="14" Text="提供了较为全面的硬件配置信息，对系统各各硬件进行扫描，显示出详细的信息"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="       "/><Run FontSize="14" Text="●"/><Run FontSize="14" Text=" "/><Run FontSize="14" Text="配置信息采用系统WMI进行读取，可能与实际硬件不同"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontWeight="Bold" Text="它可以做什么？"/><LineBreak/><Run FontSize="14" Text="        "/><Run FontSize="14" Text="● "/><Run FontSize="14" Text="它显示了您计算机上配件的"/><Run FontSize="14" Text="更详细的信息，包括磁盘空间，网卡链接速率等等"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ● "/><Run FontSize="14" Text="您可以对其中的一些进行复制，会自动将信息复制到您的剪切板内"/><LineBreak/><Run FontSize="14"/><LineBreak/><Run FontSize="14" Text="        ●"/><Run FontSize="14" Text=" 您还可以将此页面的信息进行导出到文件，通过单击"/><Run FontSize="14" Text=" '"/><Run FontSize="14" Text="导出配置报告文件到本地"/><Run FontSize="14" Text="'按钮进行导出"/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/></TextBlock>
+                <TextBlock x:Name="帮助3" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Margin="10,80,0,0" Height="521" Width="980" FontFamily="微软雅黑" FontSize="18" Foreground="Black" LineHeight="16"><Run FontWeight="Bold" Text="功能"/><Run FontWeight="Bold" Text="介绍："/><LineBreak/><Run FontSize="14" Text="       "/><Run FontSize="14" Text="●"/><Run FontSize="14" Text=" "/><Run FontSize="14" Text="此页面"/><Run FontSize="14" Text="提供了"/><Run FontSize="14" Text="常用的软件工具，配合它们可以让你对您的配置信息进行更全面的了解"/><LineBreak/><LineBreak/><Run FontWeight="Bold" Text="它可以做什么？"/><LineBreak/><Run FontSize="14" Text="        "/><Run FontSize="14" Text="● "/><Run FontSize="14" Text="它显示了您计算机上配件的"/><Run FontSize="14" Text="更详细的信息，包括磁盘空间，网卡链接速率等等"/><LineBreak/><Run FontSize="14"/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/><LineBreak/></TextBlock>
+            </Grid>
+
+        </Canvas>
+
+    </Grid>
+</UserControl>

@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using Hardware_ToolBox.Control_class;
+using System;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Hardware_ToolBox
 {
@@ -23,6 +13,8 @@ namespace Hardware_ToolBox
         public Initial_screen()
         {
             InitializeComponent();
+            加载.Text += "校验主程序完整性...\n";
+            Operation.Check.procedure();                            //校验程序，防止修改
         }
     }
 }

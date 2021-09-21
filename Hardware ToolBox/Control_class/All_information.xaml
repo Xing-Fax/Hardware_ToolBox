@@ -1,0 +1,189 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hardware_ToolBox.Control_class"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Hardware_ToolBox.Control_class.All_information"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="1260" Height="611">
+    <Grid>
+
+        <ScrollViewer  HorizontalAlignment="Left" Height="611" VerticalAlignment="Top" Width="1260" Focusable="False"  SnapsToDevicePixels="False" ClipToBounds="True" Background="#00000000" BorderBrush="#00000000" Foreground="Black">
+            <Grid x:Name="其他" Background="#00FF0000" Height="885" Width="1243">
+                <Canvas x:Name="其他1" Margin="0,0,838,550" Width="405">
+                    <materialDesign:Card x:Name="背景"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Height="335" Width="405" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="290" VerticalAlignment="Top" Width="385" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息1" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="CPU名称："/><LineBreak/><Run Text="CPU编号："/><LineBreak/><Run Text="CPU版本："/><LineBreak/><Run Text="CPU位宽："/><LineBreak/><Run Text="CPU主频："/><LineBreak/><Run Text="CPU外频："/><LineBreak/><Run Text="CPU接口："/><LineBreak/><Run Text="CPU制造商："/><LineBreak/><Run Text="CPU核心数："/><LineBreak/><Run Text="CPU线程数："/><LineBreak/><Run Text="CPU L2缓存："/><LineBreak/><Run Text="CPU L3缓存："/><LineBreak/><Run Text="CPU电压："/><LineBreak/><Run Text="虚拟化支持："/><LineBreak/><Run Text="Hyper-V支持："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="处理器信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="329" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="3.999"/>
+                    <materialDesign:PackIcon Kind="Cpu64Bit" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制1" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                        <ListBoxItem x:Name="处理器复制" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="处理器复制_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他2" Margin="421.5,0,416.5,755" Width="405">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="130" Width="405" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="85" VerticalAlignment="Top" Width="385" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息2" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="主板型号："/><LineBreak/><Run Text="主板制造商："/><LineBreak/><Run Text="主机板："/><LineBreak/><Run Text="热拔插支持："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="主机板信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="329" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="3.999"/>
+                    <materialDesign:PackIcon Kind="BallotOutline" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制2" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                        <ListBoxItem x:Name="主机板" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="主机板_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他3" Margin="841.5,0,0,645">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="240" Width="402.5" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="382.5" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息3" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="磁盘名称："/><LineBreak/><Run Text="磁盘型号："/><LineBreak/><Run Text="磁盘状态："/><LineBreak/><Run Text="生产厂商："/><LineBreak/><Run Text="磁盘大小："/><LineBreak/><Run Text="磁盘描述："/><LineBreak/><Run Text="柱面总数："/><LineBreak/><Run Text="磁头总数："/><LineBreak/><Run Text="扇区总数："/><LineBreak/><Run Text="序列号："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="磁盘信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="321.5" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="3.999"/>
+                    <materialDesign:PackIcon Kind="Harddisk" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制3" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="362.5" Focusable="False">
+                        <ListBoxItem x:Name="磁盘复制" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="磁盘复制_MouseUp" Focusable="False">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他4" Margin="0,350,838,335" Width="405">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="200" Width="405" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Width="385" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息4" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="内存编号："/><LineBreak/><Run Text="内存类型："/><LineBreak/><Run Text="内存位宽："/><LineBreak/><Run Text="内存标签："/><LineBreak/><Run Text="内存容量："/><LineBreak/><Run Text="内存频率："/><LineBreak/><Run Text="生产厂商： "/><LineBreak/><Run Text="热拔插支持："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="物理内存信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="4.999"/>
+                    <materialDesign:PackIcon Kind="Tangram" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制4" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                        <ListBoxItem x:Name="物理内存" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="物理内存_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他5" Margin="421.5,145,416.5,495" Width="405">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="245" Width="405" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="385" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息5" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="网卡编号："/><LineBreak/><Run Text="网卡名称："/><LineBreak/><Run Text="网卡类型："/><LineBreak/><Run Text="物理设备："/><LineBreak/><Run Text="电源管理："/><LineBreak/><Run Text="产品名称："/><LineBreak/><Run Text="网卡带宽："/><LineBreak/><Run Text="生产厂商："/><LineBreak/><Run Text="设备描述："/><LineBreak/><Run Text="MAC地址："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="网络适配器信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="4.999"/>
+                    <materialDesign:PackIcon Kind="WifiAlert" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制5" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                        <ListBoxItem x:Name="网卡" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="网卡_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他6" Margin="841.5,255,0,430">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="200" Width="402.5" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="155" VerticalAlignment="Top" Width="382.5" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息6" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="设备ID："/><LineBreak/><Run Text="文件系统："/><LineBreak/><Run Text="卷序名称："/><LineBreak/><Run Text="卷序列号："/><LineBreak/><Run Text="可用空间："/><LineBreak/><Run Text="总共大小："/><LineBreak/><Run Text="支持磁盘配额："/><LineBreak/><Run Text="支持文件压缩："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="逻辑分区信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="321.5" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="3.999"/>
+                    <materialDesign:PackIcon Kind="ExpandAllOutline" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制6" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="362.5">
+                        <ListBoxItem x:Name="逻辑分区" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="逻辑分区_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他7" Margin="421.5,405,416.5,300" Width="405">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="180" Width="405" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="135" VerticalAlignment="Top" Width="385" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息7" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="系统名称："/><LineBreak/><Run Text="计算机名称："/><LineBreak/><Run Text="系统版本："/><LineBreak/><Run Text="系统位宽："/><LineBreak/><Run Text="注册用户："/><LineBreak/><Run Text="安装日期："/><LineBreak/><Run Text="序列号："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="操作系统信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="4.999"/>
+                    <materialDesign:PackIcon Kind="MicrosoftWindows" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制7" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                        <ListBoxItem x:Name="操作系统复制" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="操作系统复制_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他8" Margin="841.5,470,0,290">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="125" Width="402.5" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="382.5" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息8" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="BIOS名称："/><LineBreak/><Run Text="生产厂商："/><LineBreak/><Run Text="主要BIOS："/><LineBreak/><Run Text="BIOS版本："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="系统BIOS信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="329" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="3.999"/>
+                    <materialDesign:PackIcon Kind="Chip" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制8" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="362.5">
+                        <ListBoxItem x:Name="系统BIOS" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="系统BIOS_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他9" Margin="0,568.898,838,50" Width="405">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="276.102" Width="405" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="231.102" VerticalAlignment="Top" Width="385" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息9" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="监视器名称："/><LineBreak/><Run Text="监视器类型："/><LineBreak/><Run Text="生产厂商："/><LineBreak/><Run Text="监视器编号："/><LineBreak/><Run Text="监视器高度："/><LineBreak/><Run Text="监视器宽度："/><LineBreak/><Run Text="电源管理支持："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="监视器信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="4.999"/>
+                    <materialDesign:PackIcon Kind="MonitorDashboard" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制9" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                        <ListBoxItem x:Name="监视器" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="监视器_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他10" Margin="421.5,603.898,416.5,50" Width="405">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="241.102" Width="405" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="195" VerticalAlignment="Top" Width="385" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息10" TextWrapping="Wrap" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="设备名称："/><LineBreak/><Run Text="芯片厂商："/><LineBreak/><Run Text="出厂日期："/><LineBreak/><Run Text="内存大小："/><LineBreak/><Run Text="驱动程序："/><LineBreak/><Run Text="驱动版本："/><LineBreak/><Run Text="DAC类型："/><LineBreak/><Run Text="最大刷新率："/><LineBreak/><Run Text="最小刷新率："/><LineBreak/><Run Text="当前显示模式："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="显示适配器信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="4.999"/>
+                    <materialDesign:PackIcon Kind="ExpansionCard" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制10" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                        <ListBoxItem x:Name="显卡复制" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="显卡复制_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="其他11" Margin="841.5,613.898,0,50">
+                    <materialDesign:Card
+                        materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                        Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="231.102" Width="402.5" />
+                    <ScrollViewer HorizontalAlignment="Left" Height="185" VerticalAlignment="Top" Width="382.5" Canvas.Left="10" Canvas.Top="35">
+                        <TextBlock x:Name="其他信息11" Foreground="Black" FontSize="14" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"><Run Text="设备名称："/><LineBreak/><Run Text="制造商："/><LineBreak/><Run Text="支持电源管理："/><LineBreak/><Run Text="当前状态："/></TextBlock>
+                    </ScrollViewer>
+                    <Label Content="音频适配器信息：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="329" FontSize="16" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" Height="27" Canvas.Left="36" Canvas.Top="3.999"/>
+                    <materialDesign:PackIcon Kind="Speaker" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Left="10" Canvas.Top="4.999"/>
+                    <ListBox x:Name="复制11" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="362.5">
+                        <ListBoxItem x:Name="声音卡" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="声音卡_MouseUp">
+                            <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                        </ListBoxItem>
+                    </ListBox>
+                </Canvas>
+                <Canvas x:Name="底部" Margin="11.5,850,10,14.293">
+                    <Label Content="----------到底啦！----------" HorizontalAlignment="Left" VerticalAlignment="Top" Width="405" HorizontalContentAlignment="Center" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="410"/>
+                    <Label Content="注：以上信息均来自系统WMI,信息仅供参考,请以实际为准！" HorizontalAlignment="Left" VerticalAlignment="Top" Width="380" HorizontalContentAlignment="Center" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
+                    <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="导出配置报告文件到本地" VerticalAlignment="Top" Height="20.706" Width="402.5" Foreground="#CC286DFF" TextAlignment="Center" TextDecorations="Underline" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="820" Canvas.Top="5.001"/>
+                    <Button x:Name="导出配置报告" Content="Button" Width="145" Canvas.Left="948.5" Canvas.Top="5.001" Height="19.697" Background="#00673AB7" BorderBrush="#00673AB7" Foreground="#00000000" Click="导出配置报告_Click"/>
+                </Canvas>
+            </Grid>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

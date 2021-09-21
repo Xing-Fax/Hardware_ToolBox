@@ -1,0 +1,88 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hardware_ToolBox.Control_class"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Hardware_ToolBox.Control_class.Personalise"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="1260" Height="611">
+    <Grid>
+
+        <Canvas x:Name="个性化设置">
+            <materialDesign:Card x:Name="背景"
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                Padding="32" Height="611" Width="440" />
+            <Label x:Name="重启" Content="一些设置需要重启才能生效" HorizontalAlignment="Left" VerticalAlignment="Top" Width="214.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="#DDFF0000" HorizontalContentAlignment="Right" Canvas.Left="215.333" Canvas.Top="9.291" Visibility="Collapsed"/>
+            <Canvas Height="22.554" Canvas.Left="9.667" Canvas.Top="482.446" Width="98.333" Visibility="Collapsed">
+                <ToggleButton
+                    Style="{StaticResource MaterialDesignSwitchToggleButton}"
+                    Canvas.Left="64.333" Canvas.Top="5.223" Height="17" SnapsToDevicePixels="True" />
+                <Label Content="快速启动：" HorizontalAlignment="Left" VerticalAlignment="Top" Width="64.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Height="22.554"/>
+            </Canvas>
+            <Canvas Height="30" Width="408.667" Canvas.Top="330" Canvas.Left="10">
+                <Label Content="程序功能设置" HorizontalAlignment="Left" VerticalAlignment="Top" Width="378.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Height="30" Canvas.Left="30" Foreground="Black"/>
+                <materialDesign:PackIcon Kind="CogOutline" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Foreground="Black" SnapsToDevicePixels="True"/>
+            </Canvas>
+            <Canvas Height="30" Canvas.Left="10.333" Canvas.Top="9.998" Width="420">
+                <Label Content="界面个性化" HorizontalAlignment="Left" VerticalAlignment="Top" Width="390" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Height="30" Foreground="Black" Canvas.Left="30"/>
+                <materialDesign:PackIcon Kind="PaletteOutline" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Foreground="Black" SnapsToDevicePixels="True"/>
+            </Canvas>
+            <Canvas Height="47.707" Canvas.Left="9.667" Canvas.Top="177.05" Width="414.333">
+                <Slider x:Name="背景模糊" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="414" Maximum="50" Focusable="False" Value="2.5" ValueChanged="背景模糊_ValueChanged" Canvas.Left="0.333" Canvas.Top="25.707"/>
+                <Label x:Name="背景模糊度" Content="背景模糊程度：5 %" HorizontalAlignment="Left" VerticalAlignment="Top" Width="394" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="20.333"/>
+                <materialDesign:PackIcon  Kind="ArrangeBringToFront" Height="20" Width="20" Foreground="#DD000000" Canvas.Top="2.9"/>
+            </Canvas>
+            <Canvas Height="47.707" Canvas.Left="9.667" Canvas.Top="229.757" Width="414">
+                <Slider x:Name="透明" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="414" Maximum="100" Focusable="False" ValueChanged="透明_ValueChanged" Canvas.Top="25.707"/>
+                <Label x:Name="透明度" Content="背景不透明度：0 %" HorizontalAlignment="Left" VerticalAlignment="Top" Width="394" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="20"/>
+                <materialDesign:PackIcon  Kind="TransitionMasked" Height="20" Width="20" Foreground="#DD000000" Canvas.Top="1.898"/>
+            </Canvas>
+            <Canvas Height="47.707" Canvas.Left="9.667" Canvas.Top="282.464" Width="414">
+                <Slider x:Name="卡片透明" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="414" Maximum="100" Focusable="False" SmallChange="1" Value="70" ValueChanged="卡片透明_ValueChanged" Canvas.Top="25.707"/>
+                <Label x:Name="卡片透明度" Content="卡片不透明度：70 %" HorizontalAlignment="Left" VerticalAlignment="Top" Width="394" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="20"/>
+                <materialDesign:PackIcon  Kind="TransitionMasked" Height="20" Width="20" Foreground="#DD000000" Canvas.Top="2.298"/>
+            </Canvas>
+            <Canvas Height="52.707" Canvas.Left="10.333" Canvas.Top="365" Width="414">
+                <Slider x:Name="过渡时间条" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="414" Maximum="100" Focusable="False" SmallChange="1" Value="30" ValueChanged="过渡时间条_ValueChanged" Canvas.Top="30.707"/>
+                <Label x:Name="过渡时间" Content="状态条过渡动画时间：   300 毫秒" HorizontalAlignment="Left" VerticalAlignment="Top" Width="393.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="20.333"/>
+                <materialDesign:PackIcon  Kind="AvTimer" Height="20" Width="20" Foreground="#DD000000" Canvas.Top="1.707"/>
+            </Canvas>
+            <Canvas Height="52.707" Canvas.Left="10.333" Canvas.Top="422.707" Width="414">
+                <Slider x:Name="刷新间隔条" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="414" Maximum="500" Focusable="False" SmallChange="1" Value="100" ValueChanged="刷新间隔条_ValueChanged" Minimum="50" Canvas.Top="30.707"/>
+                <Label x:Name="刷新间隔" Content="硬件信息刷新间隔： 1000 毫秒" HorizontalAlignment="Left" VerticalAlignment="Top" Width="393.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="20.333"/>
+                <materialDesign:PackIcon  Kind="AvTimer" Height="20" Width="20" Foreground="#DD000000" Canvas.Top="1.591"/>
+            </Canvas>
+            <Canvas Height="77.05" Canvas.Left="10" Canvas.Top="95" Width="409.667">
+                <Label Content="界面主题颜色" HorizontalAlignment="Left" VerticalAlignment="Top" Width="389.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="20"/>
+                <materialDesign:PackIcon  Kind="SelectColor" Height="20" Width="20" Foreground="#DD000000" Canvas.Top="2.398"/>
+                <RadioButton x:Name="蓝" Content="荀子蓝" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="64.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="蓝_Checked" Canvas.Top="25.707"/>
+                <RadioButton x:Name="红" Content="山茶红" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="77.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="红_Checked" Canvas.Left="81.669" Canvas.Top="25.707"/>
+                <RadioButton x:Name="绿" Content="宝石绿" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="68" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="绿_Checked" Canvas.Left="166.667" Canvas.Top="25.707"/>
+                <RadioButton x:Name="粉" Content="桃花粉" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="65" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="粉_Checked" Canvas.Left="254.667" Canvas.Top="25.707"/>
+                <RadioButton x:Name="灰" Content="古典灰" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="70" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="灰_Checked" Canvas.Left="339.667" Canvas.Top="25.707"/>
+                <RadioButton x:Name="橙" Content="活力橙" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="64.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="橙_Checked" Canvas.Top="58.707"/>
+                <RadioButton x:Name="紫" Content="基佬紫" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="77.667" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="紫_Checked" Canvas.Top="58.707" Canvas.Left="81.669"/>
+                <RadioButton x:Name="黑" Content="夜间黑" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="68" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="黑_Checked" Canvas.Top="58.707" Canvas.Left="166.667"/>
+                <RadioButton x:Name="黄" Content="咸蛋黄" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="65" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="黄_Checked" Canvas.Top="58.707" Canvas.Left="254.667"/>
+                <RadioButton x:Name="青" Content="衬衫青" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="70" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="青_Checked" Canvas.Top="58.707" Canvas.Left="339.667"/>
+            </Canvas>
+            <Canvas Height="44.05" Canvas.Left="10.333" Canvas.Top="44.998" Width="420">
+                <Label Content="背景填充方式" HorizontalAlignment="Left" VerticalAlignment="Top" Width="400" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Height="24" Canvas.Left="20"/>
+                <materialDesign:PackIcon Kind="ImageSizeSelectLarge" Height="20" Width="20" Foreground="#DD000000" Canvas.Top="2.25"/>
+                <RadioButton x:Name="原始" Content="原始" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="48" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="原始_Checked" Canvas.Left="0.333" Canvas.Top="25.707"/>
+                <RadioButton x:Name="填充" Content="缩放" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="48" RenderTransformOrigin="-0.042,0.645" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="填充_Checked" Canvas.Left="82.333" Canvas.Top="25.707"/>
+                <RadioButton x:Name="缩放" Content="填充" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="缩放_Checked" Canvas.Left="167" Canvas.Top="25.707"/>
+                <RadioButton x:Name="适应" Content="适应" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" Width="48" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Checked="适应_Checked" Canvas.Left="255" Canvas.Top="25.707"/>
+            </Canvas>
+            <Canvas Height="69" Canvas.Left="10" Canvas.Top="532" Width="420">
+                <Button x:Name="选择背景" Content="选择图片背景" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="选择背景_Click" Foreground="#DDFFFFFF"/>
+                <Button x:Name="选择视频" Content="选择视频背景" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="选择视频_Click" Foreground="#DDFFFFFF" Canvas.Left="145"/>
+                <Button x:Name="默认" Content="恢复默认背景" HorizontalAlignment="Left" VerticalAlignment="Top" Width="130" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="默认_Click" Foreground="#DDFFFFFF" Canvas.Left="290"/>
+                <Button x:Name="默认设置" Content="还原部分默认设置" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="默认设置_Click" Foreground="#DDFFFFFF" Canvas.Top="37" Canvas.Left="217"/>
+                <Button x:Name="默认设置2" Content="还原全部默认设置" HorizontalAlignment="Left" VerticalAlignment="Top" Width="203" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Click="默认设置2_Click" Foreground="#DDFFFFFF" Canvas.Top="37"/>
+            </Canvas>
+        </Canvas>
+
+    </Grid>
+</UserControl>

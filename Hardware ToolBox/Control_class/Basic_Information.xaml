@@ -1,0 +1,119 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hardware_ToolBox.Control_class"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Hardware_ToolBox.Control_class.Basic_Information"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Width="1260" Height="611">
+    <Grid>
+        <Canvas x:Name="基本信息卡" Margin="0,0,785,340">
+            <materialDesign:Card x:Name="主要的" x:FieldModifier="public"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    Padding="9,32,32,32" Height="266" Width="470" Background="White" Opacity="0.7" />
+            <materialDesign:PackIcon Kind="CodeGreaterThanOrEqual" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
+            <Label Content="计算机基本信息：" Canvas.Left="36" Canvas.Top="10" Width="143" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontSize="16" Height="31" FontWeight="Bold"/>
+            <ScrollViewer Height="216" Width="450" Canvas.Left="10" Canvas.Top="40" RenderTransformOrigin="0,0">
+                <TextBlock x:Name="电脑基本信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify"><Run Text="处理器"/><Run Text="："/><Run Text=" 待获取..."/><LineBreak/><Run Text="主板："/><Run Text="     待获取..."/><LineBreak/><Run Text="内存："/><Run Text="     待获取..."/><LineBreak/><Run Text="显卡："/><Run Text="     待获取..."/><LineBreak/><Run Text="显示器："/><Run Text=" 待获取..."/><LineBreak/><Run Text="硬盘："/><Run Text="     待获取..."/><LineBreak/><Run Text="声卡："/><Run Text="     待获取..."/><LineBreak/><Run Text="网卡："/><Run Text="     待获取."/><Run Text=".."/></TextBlock>
+            </ScrollViewer>
+            <ListBox x:Name="复制信息1" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="430">
+                <ListBoxItem x:Name="关闭1" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="关闭1_MouseUp">
+                    <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                </ListBoxItem>
+            </ListBox>
+        </Canvas>
+        <Canvas x:Name="运行状态卡" Margin="0,271,785,0">
+            <materialDesign:Card
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    Padding="32" Width="470" Height="330" Canvas.Top="10" Opacity="{Binding Opacity, ElementName=主要的}" />
+            <ProgressBar x:Name="处理器占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="77.8" SmallChange="1">
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="Gainsboro" Opacity="0.4"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <materialDesign:PackIcon Kind="CogSync" HorizontalAlignment="Left" Height="28.25" VerticalAlignment="Top" Width="26" Canvas.Left="10" Canvas.Top="18.233" Foreground="Black"/>
+            <Label Content="计算机运行状态：" Height="28.25" Width="139" Canvas.Left="36" Canvas.Top="18.233" FontSize="16" FontWeight="Bold" Foreground="#FD000000" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" VerticalAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center"/>
+            <Label x:Name="处理器占用" Content="CPU利用率：      待获取..." Canvas.Left="10" Canvas.Top="50.733" FontWeight="Bold" FontSize="14" Width="165" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
+            <Label x:Name="内存占用" Content="RAM利用率：      待获取..." Canvas.Left="10" Canvas.Top="185.723" FontWeight="Bold" FontSize="14" Width="165" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
+            <ProgressBar x:Name="内存占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="212.805" Foreground="{Binding Foreground, ElementName=处理器占用条}" SmallChange="1" BorderBrush="{Binding BorderBrush, ElementName=处理器占用条}">
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="Gainsboro" Opacity="0.4"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <Label x:Name="显卡占用" Content="GPU利用率：      待获取..." Canvas.Left="10" Canvas.Top="117.061" FontWeight="Bold" FontSize="14" Width="165" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
+            <ProgressBar x:Name="显卡占用条" HorizontalAlignment="Left" Height="20.2" VerticalAlignment="Top" Width="435" Canvas.Left="15" Canvas.Top="144.136" Foreground="{Binding Foreground, ElementName=处理器占用条}" SmallChange="1" BorderBrush="{Binding BorderBrush, ElementName=处理器占用条}">
+                <ProgressBar.Background>
+                    <SolidColorBrush Color="Gainsboro" Opacity="0.4"/>
+                </ProgressBar.Background>
+            </ProgressBar>
+            <Grid Height="101.995" Width="455" Canvas.Left="10" Canvas.Top="233.005">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="55*"/>
+                    <ColumnDefinition Width="36*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="CPU参数" Content="CPU主频：&#xA;CPU外频：&#xA;CPU温度：&#xA;运行时间：" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="85" Height="85" Margin="0,10,0,0"/>
+                <Label x:Name="CPU信息" Content="待获取...&#xA;待获取...&#xA;待获取...&#xA;待获取..." HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="140" Height="85" Margin="85,10,0,0"/>
+                <Label x:Name="GPU参数" Content="GPU主频：&#xA;显存频率：&#xA;着色器频率：&#xA;GPU二极管：&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="90" Height="85" Margin="225,10,0,0" Grid.ColumnSpan="2"/>
+                <Label x:Name="GPU信息" Content="待获取...&#xA;待获取...&#xA;待获取...&#xA;待获取..." HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" Width="140" Height="85" Margin="40,10,0,0" Grid.Column="1"/>
+            </Grid>
+        </Canvas>
+        <Canvas x:Name="操作系统" Margin="490,0,420,356">
+            <materialDesign:Card
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    Padding="9,32,32,32" Height="246" Width="345" Opacity="{Binding Opacity, ElementName=主要的}" />
+            <materialDesign:PackIcon Kind="MicrosoftWindows"  HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
+            <Label Content="Windows操作系统：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
+            <TextBlock x:Name="操作系统信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="195" Canvas.Top="41" Canvas.Left="10" Width="100" Text="操作系统名称： &#xA;操作系统版本： &#xA;操作系统位宽： &#xA;注册用户名称： &#xA;物理内存大小： &#xA;分页文件大小： &#xA;虚拟内存大小： &#xA;计算机名称： &#xA;系统序列号：  "/>
+            <TextBlock x:Name="操作系统信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="195" Canvas.Top="41" Canvas.Left="110" Width="225"><Run Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/><LineBreak/><Run FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Text="待获取..."/></TextBlock>
+            <ListBox x:Name="复制信息1_Copy" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="305">
+                <ListBoxItem x:Name="关闭2" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="关闭2_MouseUp">
+                    <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                </ListBoxItem>
+            </ListBox>
+        </Canvas>
+        <Canvas x:Name="显卡显示器" Margin="490,260,425,0">
+            <materialDesign:Card
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    Padding="9,32,32,32" Height="351" Width="345" Opacity="{Binding Opacity, ElementName=主要的}" />
+            <materialDesign:PackIcon Kind="Monitor"  HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
+            <Label Content="显示适配器和监视器：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
+            <TextBlock x:Name="显卡显示器信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="310" Canvas.Top="41" Canvas.Left="10" Width="115" Text="显示适配器型号： &#xA;显示适配器厂商： &#xA;驱动程序版本： &#xA;显示适配器ID： &#xA;显示适配器显存： &#xA;显示适配器步进： &#xA;监视器型号： &#xA;监视器ID： &#xA;监视器尺寸： &#xA;监视器高宽： &#xA;监视器生产日期： &#xA;监视器Edid版本： &#xA;当前显示模式： &#xA;显卡DAC类型： "/>
+            <TextBlock x:Name="显卡显示器信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="311.334" Canvas.Top="39.666" Canvas.Left="125" Width="210"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="带获取..."/></TextBlock>
+            <ListBox x:Name="复制信息1_Copy1" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="305">
+                <ListBoxItem x:Name="关闭3" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="关闭3_MouseUp">
+                    <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                </ListBoxItem>
+            </ListBox>
+        </Canvas>
+        <Canvas x:Name="中央处理器" Margin="855,0,0,136">
+            <materialDesign:Card
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    Padding="9,32,32,32" Height="466" Width="405" Opacity="{Binding Opacity, ElementName=主要的}" />
+            <materialDesign:PackIcon Kind="Cpu64Bit"  HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
+            <Label Content="中央处理器单元：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
+            <TextBlock x:Name="中央处理器信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="415" Canvas.Top="41" Canvas.Left="10" Width="100" Text="处理器型号： &#xA;处理器架构： &#xA;处理器厂商： &#xA;处理器接口： &#xA;处理器核心： &#xA;处理器线程： &#xA;处理器位宽： &#xA;处理器主频： &#xA;处理器外频： &#xA;虚拟化支持： &#xA;处理器数量： &#xA;缓存一容量： &#xA;缓存二容量： &#xA;缓存三容量： &#xA;处理器电压： &#xA;已安装内存： &#xA;安装内存数量： &#xA;Hyper-V支持： &#xA;处理器序列号： "/>
+            <TextBlock x:Name="中央处理器信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="415" Canvas.Top="41" Canvas.Left="110" Width="285"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/></TextBlock>
+            <ListBox x:Name="复制信息1_Copy2" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                <ListBoxItem x:Name="关闭4" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="关闭4_MouseUp">
+                    <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                </ListBoxItem>
+            </ListBox>
+        </Canvas>
+        <Canvas x:Name="BISO芯片" Margin="855,480,0,0">
+            <materialDesign:Card
+                    materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                    Padding="9,32,32,32" Height="131" Width="405" Opacity="{Binding Opacity, ElementName=主要的}" />
+            <materialDesign:PackIcon Kind="Chip"  HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="26" Foreground="Black" Canvas.Top="10" Canvas.Left="10"/>
+            <Label Content="系统BIOS芯片：" Canvas.Left="36" Canvas.Top="10" Width="164" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Foreground="Black" FontWeight="Bold" FontSize="16" Height="31"/>
+            <TextBlock x:Name="bios信息名称" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="85" Canvas.Top="36" Canvas.Left="10" Width="75" Text="BIOS厂商： &#xA;BISO说明： &#xA;BIOS版本： &#xA;OEM版本： "/>
+            <TextBlock x:Name="bios信息" TextWrapping="Wrap" Foreground="#DD000000" LineHeight="22" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontSize="14" TextAlignment="Justify" Height="85" Canvas.Top="36" Canvas.Left="85" Width="310"><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/><LineBreak/><Run Text="待获取..."/></TextBlock>
+            <ListBox x:Name="复制信息1_Copy3" ToolTip="复制信息到剪切板" Height="40" Width="40" Foreground="White" Canvas.Left="365">
+                <ListBoxItem x:Name="关闭5" ToolTip="复制信息" Width="40" Height="40" Cursor="Hand" MouseUp="关闭5_MouseUp">
+                    <materialDesign:PackIcon Kind="ContentCopy" HorizontalAlignment="Center" VerticalAlignment="Center" Width="25" Height="25" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#00000000" Foreground="Black"/>
+                </ListBoxItem>
+            </ListBox>
+        </Canvas>
+
+    </Grid>
+</UserControl>

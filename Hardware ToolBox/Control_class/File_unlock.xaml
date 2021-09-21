@@ -1,0 +1,58 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Hardware_ToolBox.Control_class"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Hardware_ToolBox.Control_class.File_unlock"
+             mc:Ignorable="d" Height="610" Width="1260">
+    <Grid>
+
+        <Canvas x:Name="文件解锁" Margin="0,0,815,435">
+            <materialDesign:Card x:Name="背景" x:FieldModifier="public"
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                Padding="32" Opacity="{Binding Opacity, ElementName=主要的}" Height="176" Width="445" />
+            <RadioButton x:Name="解锁" Content="解锁" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Width="55" Canvas.Left="10" Canvas.Top="131" VerticalContentAlignment="Bottom" IsChecked="True" Checked="解锁_Checked"/>
+            <Label Content="文件占用解锁器" HorizontalAlignment="Left" VerticalAlignment="Top" Width="290" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Canvas.Left="40" Canvas.Top="11.206" Height="30"/>
+            <TextBox x:Name="文件" HorizontalAlignment="Left" Height="26.793" VerticalAlignment="Top" Width="320" Canvas.Left="10" Canvas.Top="46.206" Foreground="Black" FontFamily="微软雅黑" VerticalScrollBarVisibility="Disabled"/>
+            <Button Content="选择文件" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="335" Canvas.Top="40.999" Foreground="#DDFFFFFF" Click="Button_Click"/>
+            <TextBox x:Name="路径" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" Canvas.Left="10" Canvas.Top="90" Foreground="Black" IsEnabled="False" FontFamily="微软雅黑"/>
+            <Button Content="选择路径" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="335" Canvas.Top="84" Foreground="#DDFFFFFF" IsEnabled="{Binding IsEnabled, ElementName=路径}" Click="Button_Click_2"/>
+            <RadioButton x:Name="解锁删除" Content="解锁删除" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Width="85" Canvas.Left="70" Canvas.Top="131" VerticalContentAlignment="Bottom" Checked="解锁删除_Checked"/>
+            <RadioButton x:Name="解锁移动" Content="解锁移动" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Width="85" Canvas.Left="160" Canvas.Top="131" VerticalContentAlignment="Bottom" Checked="解锁移动_Checked"/>
+            <RadioButton x:Name="解锁复制" Content="解锁复制" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Width="85" Canvas.Left="250" Canvas.Top="131" VerticalContentAlignment="Bottom" Checked="解锁复制_Checked"/>
+            <Button Content="开始操作" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="335" Canvas.Top="125.463" Foreground="#DDFFFFFF" Click="Button_Click_1"/>
+            <materialDesign:PackIcon Kind="FileLock" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Canvas.Left="10" Canvas.Top="11.206" Foreground="Black" SnapsToDevicePixels="True"/>
+        </Canvas>
+        <Canvas x:Name="Base64" Margin="0,180,815,0">
+            <materialDesign:Card
+                materialDesign:ShadowAssist.ShadowDepth="Depth2"
+                Padding="32" Opacity="{Binding Opacity, ElementName=背景}" Height="430" Width="445" />
+            <Button Content="开始操作" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" Canvas.Left="335" Canvas.Top="40.462" Foreground="#DDFFFFFF" Click="Button_Click_3"/>
+            <Label Content="Base64 解/编 码" HorizontalAlignment="Left" VerticalAlignment="Top" Width="290" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" FontWeight="Bold" FontSize="16" Canvas.Left="40" Canvas.Top="11.206" Height="30"/>
+            <RadioButton x:Name="解码" Content="解码操作" Canvas.Left="159.822" Canvas.Top="45.999" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" VerticalContentAlignment="Bottom"/>
+            <RadioButton x:Name="编码" Content="编码操作" Canvas.Left="69.986" Canvas.Top="45.999" Foreground="Black" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN" VerticalContentAlignment="Bottom" IsChecked="True"/>
+            <Label Content="操作：" Canvas.Left="10" Canvas.Top="43.999" Width="50" FontFamily="/Hardware ToolBox;component/Resources/#Nowar Warcraft Rounded CN"/>
+            <Canvas Height="148" Canvas.Left="10" Canvas.Top="272" Width="425">
+                <Rectangle Height="148" Stroke="{Binding CaretBrush, ElementName=输出}" StrokeThickness="1.5" Width="425" RadiusY="4.25" RadiusX="4.25">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="#FFF4F4F5" Opacity="0"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBox x:Name="输出" Height="148" TextWrapping="Wrap" Width="425" BorderBrush="{x:Null}" Foreground="Black" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Clip="M0.75,5 C0.75,2.6527898 2.6527898,0.75 5,0.75 L420,0.75 C422.34721,0.75 424.25,2.6527898 424.25,5 L424.25,143 C424.25,145.34721 422.34721,147.25 420,147.25 L5,147.25 C2.6527898,147.25 0.75,145.34721 0.75,143 z" FontFamily="微软雅黑"/>
+            </Canvas>
+            <Canvas Height="151.4" Canvas.Left="10" Canvas.Top="97" Width="425">
+                <Rectangle Height="148" Stroke="{Binding CaretBrush, ElementName=输入}" StrokeThickness="1.5" Width="425" RadiusY="4.25" RadiusX="4.25">
+                    <Rectangle.Fill>
+                        <SolidColorBrush Color="#FFF4F4F5" Opacity="0"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <TextBox x:Name="输入" Height="148" TextWrapping="Wrap" Width="425" BorderBrush="{x:Null}" Foreground="Black" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" Clip="M0.75,5 C0.75,2.6527898 2.6527898,0.75 5,0.75 L420,0.75 C422.34721,0.75 424.25,2.6527898 424.25,5 L424.25,143 C424.25,145.34721 422.34721,147.25 420,147.25 L5,147.25 C2.6527898,147.25 0.75,145.34721 0.75,143 z" FontFamily="微软雅黑"/>
+            </Canvas>
+            <Label Content="输入：" Canvas.Left="10" Canvas.Top="73.163" FontFamily="微软雅黑"/>
+            <Label Content="输出：" Canvas.Left="10" Canvas.Top="248.163" FontFamily="微软雅黑"/>
+            <materialDesign:PackIcon Kind="CodeJson" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="30" Canvas.Left="10" Canvas.Top="11.206" Foreground="Black" SnapsToDevicePixels="True"/>
+        </Canvas>
+
+    </Grid>
+</UserControl>
